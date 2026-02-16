@@ -1,0 +1,1028 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visual Content Creator & Digital Artist | Melbourne</title>
+    <meta name="description" content="Melbourne-based visual content creator and digital artist specializing in social media content, video, and original paintings. Available for freelance projects.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=Work+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --color-primary: #1a1a1a;
+            --color-accent: #d4a574;
+            --color-secondary: #4a5f4e;
+            --color-light: #f5f3ef;
+            --color-white: #ffffff;
+            --color-gray: #6b6b6b;
+            --font-display: 'Cormorant Garamond', serif;
+            --font-body: 'Work Sans', sans-serif;
+            --spacing-unit: 1.5rem;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: var(--font-body);
+            color: var(--color-primary);
+            background-color: var(--color-light);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: rgba(245, 243, 239, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 1.5rem 3rem;
+            border-bottom: 1px solid rgba(212, 165, 116, 0.2);
+            animation: slideDown 0.8s ease-out;
+        }
+        
+        nav .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        nav .logo {
+            font-family: var(--font-display);
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--color-primary);
+            text-decoration: none;
+            letter-spacing: 0.5px;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2.5rem;
+        }
+        
+        nav a {
+            color: var(--color-primary);
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 400;
+            letter-spacing: 0.5px;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+        
+        nav a:hover {
+            color: var(--color-accent);
+        }
+        
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background: var(--color-accent);
+            transition: width 0.3s ease;
+        }
+        
+        nav a:hover::after {
+            width: 100%;
+        }
+        
+        /* Hero Section */
+        .hero {
+            margin-top: 80px;
+            min-height: 90vh;
+            display: flex;
+            align-items: center;
+            padding: 3rem;
+            position: relative;
+            background: linear-gradient(135deg, var(--color-light) 0%, #e8e5df 100%);
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 50%;
+            height: 100%;
+            background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M 40 0 L 0 0 0 40" fill="none" stroke="%23d4a574" stroke-width="0.5" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+            opacity: 0.4;
+            animation: fadeIn 1.5s ease-out;
+        }
+        
+        .hero .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .hero-content h1 {
+            font-family: var(--font-display);
+            font-size: 5rem;
+            font-weight: 300;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            color: var(--color-primary);
+            animation: slideUp 0.8s ease-out 0.2s backwards;
+        }
+        
+        .hero-content h1 strong {
+            font-weight: 700;
+            color: var(--color-secondary);
+            display: block;
+        }
+        
+        .hero-content p {
+            font-size: 1.25rem;
+            color: var(--color-gray);
+            margin-bottom: 2rem;
+            line-height: 1.8;
+            animation: slideUp 0.8s ease-out 0.4s backwards;
+        }
+        
+        .hero-stats {
+            display: flex;
+            gap: 3rem;
+            margin-bottom: 2.5rem;
+            animation: slideUp 0.8s ease-out 0.6s backwards;
+        }
+        
+        .stat {
+            border-left: 2px solid var(--color-accent);
+            padding-left: 1rem;
+        }
+        
+        .stat-number {
+            font-family: var(--font-display);
+            font-size: 2.5rem;
+            font-weight: 600;
+            color: var(--color-secondary);
+            display: block;
+            line-height: 1;
+        }
+        
+        .stat-label {
+            font-size: 0.9rem;
+            color: var(--color-gray);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-top: 0.5rem;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            gap: 1.5rem;
+            animation: slideUp 0.8s ease-out 0.8s backwards;
+        }
+        
+        .btn {
+            padding: 1rem 2.5rem;
+            text-decoration: none;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+            display: inline-block;
+        }
+        
+        .btn-primary {
+            background: var(--color-secondary);
+            color: var(--color-white);
+        }
+        
+        .btn-primary:hover {
+            background: #3a4f3e;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(74, 95, 78, 0.3);
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            color: var(--color-primary);
+            border: 2px solid var(--color-primary);
+        }
+        
+        .btn-secondary:hover {
+            background: var(--color-primary);
+            color: var(--color-white);
+            transform: translateY(-2px);
+        }
+        
+        .hero-image {
+            position: relative;
+            animation: fadeIn 1s ease-out 0.4s backwards;
+        }
+        
+        .hero-image::before {
+            content: '';
+            position: absolute;
+            top: -20px;
+            right: -20px;
+            width: 100%;
+            height: 100%;
+            border: 2px solid var(--color-accent);
+            z-index: -1;
+        }
+        
+        .hero-image-placeholder {
+            width: 100%;
+            aspect-ratio: 3/4;
+            background: linear-gradient(135deg, var(--color-secondary) 0%, var(--color-accent) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--color-white);
+            font-family: var(--font-display);
+            font-size: 1.2rem;
+            text-align: center;
+            padding: 2rem;
+        }
+        
+        /* Section Styling */
+        section {
+            padding: 6rem 3rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+        
+        .section-tag {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--color-accent);
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+        
+        .section-title {
+            font-family: var(--font-display);
+            font-size: 3.5rem;
+            font-weight: 600;
+            color: var(--color-primary);
+            margin-bottom: 1.5rem;
+        }
+        
+        .section-subtitle {
+            font-size: 1.2rem;
+            color: var(--color-gray);
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+        
+        /* Portfolio Grid */
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .portfolio-item {
+            position: relative;
+            overflow: hidden;
+            background: var(--color-white);
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+            cursor: pointer;
+        }
+        
+        .portfolio-item:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+        
+        .portfolio-image {
+            width: 100%;
+            aspect-ratio: 4/3;
+            background: linear-gradient(135deg, #e0ddd5 0%, #c4bfb3 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--color-gray);
+            font-size: 0.9rem;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .portfolio-image::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: var(--color-secondary);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+        
+        .portfolio-item:hover .portfolio-image::after {
+            opacity: 0.1;
+        }
+        
+        .portfolio-info {
+            padding: 1.5rem;
+        }
+        
+        .portfolio-category {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: var(--color-accent);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+        
+        .portfolio-title {
+            font-family: var(--font-display);
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--color-primary);
+            margin-bottom: 0.5rem;
+        }
+        
+        .portfolio-description {
+            font-size: 0.95rem;
+            color: var(--color-gray);
+            line-height: 1.6;
+        }
+        
+        /* Art Gallery */
+        #art-gallery {
+            background: var(--color-white);
+        }
+        
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2.5rem;
+            margin-top: 3rem;
+        }
+        
+        .art-item {
+            background: var(--color-light);
+            transition: transform 0.3s ease;
+            position: relative;
+        }
+        
+        .art-item:hover {
+            transform: scale(1.02);
+        }
+        
+        .art-image {
+            width: 100%;
+            aspect-ratio: 3/4;
+            background: linear-gradient(135deg, #d4a574 0%, #8b7355 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--color-white);
+            font-size: 0.9rem;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .available-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: var(--color-secondary);
+            color: var(--color-white);
+            padding: 0.4rem 1rem;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 600;
+        }
+        
+        .art-info {
+            padding: 1.5rem;
+        }
+        
+        .art-title {
+            font-family: var(--font-display);
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--color-primary);
+            margin-bottom: 0.5rem;
+        }
+        
+        .art-details {
+            font-size: 0.9rem;
+            color: var(--color-gray);
+            margin-bottom: 1rem;
+        }
+        
+        .art-price {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--color-secondary);
+            margin-bottom: 1rem;
+        }
+        
+        .btn-buy {
+            width: 100%;
+            text-align: center;
+            background: var(--color-accent);
+            color: var(--color-white);
+        }
+        
+        .btn-buy:hover {
+            background: #c19563;
+            transform: translateY(-2px);
+        }
+        
+        /* About Section */
+        #about {
+            background: var(--color-primary);
+            color: var(--color-white);
+        }
+        
+        #about .section-tag {
+            color: var(--color-accent);
+        }
+        
+        #about .section-title {
+            color: var(--color-white);
+        }
+        
+        #about .section-subtitle {
+            color: rgba(255, 255, 255, 0.8);
+        }
+        
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            margin-top: 3rem;
+            align-items: center;
+        }
+        
+        .about-text p {
+            font-size: 1.1rem;
+            line-height: 1.9;
+            margin-bottom: 1.5rem;
+            color: rgba(255, 255, 255, 0.9);
+        }
+        
+        .skills-list {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+        
+        .skill-item {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 1rem;
+            border-left: 3px solid var(--color-accent);
+        }
+        
+        .skill-item strong {
+            display: block;
+            color: var(--color-accent);
+            margin-bottom: 0.3rem;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .about-image {
+            background: rgba(255, 255, 255, 0.05);
+            aspect-ratio: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.1rem;
+            border: 2px solid var(--color-accent);
+        }
+        
+        /* Contact Section */
+        #contact {
+            background: var(--color-secondary);
+            color: var(--color-white);
+            text-align: center;
+        }
+        
+        #contact .section-tag {
+            color: var(--color-accent);
+        }
+        
+        #contact .section-title {
+            color: var(--color-white);
+        }
+        
+        #contact .section-subtitle {
+            color: rgba(255, 255, 255, 0.9);
+        }
+        
+        .contact-methods {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 3rem;
+            flex-wrap: wrap;
+        }
+        
+        .contact-method {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 2rem 3rem;
+            min-width: 250px;
+            transition: background 0.3s ease;
+        }
+        
+        .contact-method:hover {
+            background: rgba(255, 255, 255, 0.15);
+        }
+        
+        .contact-method h3 {
+            font-family: var(--font-display);
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--color-accent);
+        }
+        
+        .contact-method a {
+            color: var(--color-white);
+            text-decoration: none;
+            font-size: 1.1rem;
+            transition: color 0.3s ease;
+        }
+        
+        .contact-method a:hover {
+            color: var(--color-accent);
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--color-primary);
+            color: rgba(255, 255, 255, 0.7);
+            text-align: center;
+            padding: 2rem;
+            font-size: 0.9rem;
+        }
+        
+        /* Animations */
+        @keyframes slideDown {
+            from {
+                transform: translateY(-100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        
+        @keyframes slideUp {
+            from {
+                transform: translateY(40px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        
+        /* Responsive */
+        @media (max-width: 968px) {
+            nav {
+                padding: 1rem 2rem;
+            }
+            
+            nav ul {
+                gap: 1.5rem;
+            }
+            
+            .hero .container {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+            
+            .hero-content h1 {
+                font-size: 3.5rem;
+            }
+            
+            .section-title {
+                font-size: 2.5rem;
+            }
+            
+            .portfolio-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .skills-list {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 640px) {
+            nav ul {
+                display: none;
+            }
+            
+            .hero {
+                padding: 2rem 1.5rem;
+            }
+            
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero-stats {
+                flex-direction: column;
+                gap: 1.5rem;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+            }
+            
+            section {
+                padding: 4rem 1.5rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <a href="#" class="logo">Portfolio</a>
+            <ul>
+                <li><a href="#work">Work</a></li>
+                <li><a href="#art-gallery">Art</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>
+                    Visual Content Creator
+                    <strong>& Digital Artist</strong>
+                </h1>
+                <p>I blend technical precision with creative vision to craft compelling digital content and original artwork for startups, healthcare organizations, and small businesses across Melbourne and beyond.</p>
+                
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number">20+</span>
+                        <span class="stat-label">Years in Tech</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">200+</span>
+                        <span class="stat-label">Original Paintings</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">∞</span>
+                        <span class="stat-label">Creative Ideas</span>
+                    </div>
+                </div>
+                
+                <div class="cta-buttons">
+                    <a href="#work" class="btn btn-primary">View My Work</a>
+                    <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                </div>
+            </div>
+            
+            <div class="hero-image">
+                <div class="hero-image-placeholder">
+                    [Your Professional Photo Here]<br>
+                    Replace with high-quality portrait
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="work">
+        <div class="section-header">
+            <div class="section-tag">Portfolio</div>
+            <h2 class="section-title">Visual Content Work</h2>
+            <p class="section-subtitle">From social media campaigns to video production, I create content that engages, informs, and converts.</p>
+        </div>
+        
+        <div class="portfolio-grid">
+            <div class="portfolio-item">
+                <div class="portfolio-image">
+                    [Project Image 1]
+                </div>
+                <div class="portfolio-info">
+                    <div class="portfolio-category">Social Media Campaign</div>
+                    <h3 class="portfolio-title">Healthcare Awareness Series</h3>
+                    <p class="portfolio-description">30-day content series driving 200% engagement increase for medical practice.</p>
+                </div>
+            </div>
+            
+            <div class="portfolio-item">
+                <div class="portfolio-image">
+                    [Project Image 2]
+                </div>
+                <div class="portfolio-info">
+                    <div class="portfolio-category">Video Production</div>
+                    <h3 class="portfolio-title">Startup Product Launch</h3>
+                    <p class="portfolio-description">Complete video package from concept to delivery for tech startup launch.</p>
+                </div>
+            </div>
+            
+            <div class="portfolio-item">
+                <div class="portfolio-image">
+                    [Project Image 3]
+                </div>
+                <div class="portfolio-info">
+                    <div class="portfolio-category">Brand Design</div>
+                    <h3 class="portfolio-title">Small Business Rebrand</h3>
+                    <p class="portfolio-description">Full visual identity redesign including logo, graphics, and social templates.</p>
+                </div>
+            </div>
+            
+            <div class="portfolio-item">
+                <div class="portfolio-image">
+                    [Project Image 4]
+                </div>
+                <div class="portfolio-info">
+                    <div class="portfolio-category">Content Strategy</div>
+                    <h3 class="portfolio-title">E-commerce Visual Content</h3>
+                    <p class="portfolio-description">Monthly content calendar and asset creation for online retail brand.</p>
+                </div>
+            </div>
+            
+            <div class="portfolio-item">
+                <div class="portfolio-image">
+                    [Project Image 5]
+                </div>
+                <div class="portfolio-info">
+                    <div class="portfolio-category">Motion Graphics</div>
+                    <h3 class="portfolio-title">Explainer Video Series</h3>
+                    <p class="portfolio-description">Animated explainer videos simplifying complex healthcare concepts.</p>
+                </div>
+            </div>
+            
+            <div class="portfolio-item">
+                <div class="portfolio-image">
+                    [Project Image 6]
+                </div>
+                <div class="portfolio-info">
+                    <div class="portfolio-category">Photography & Editing</div>
+                    <h3 class="portfolio-title">Product Photography</h3>
+                    <p class="portfolio-description">Professional product shoots and post-production for e-commerce clients.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="art-gallery">
+        <div class="section-header">
+            <div class="section-tag">Original Art</div>
+            <h2 class="section-title">Paintings Collection</h2>
+            <p class="section-subtitle">Over 200 original watercolor and acrylic paintings available for purchase. Each piece is one-of-a-kind.</p>
+        </div>
+        
+        <div class="gallery-grid">
+            <div class="art-item">
+                <div class="art-image">
+                    <span class="available-badge">Available</span>
+                    [Painting Image 1]
+                </div>
+                <div class="art-info">
+                    <h3 class="art-title">Sunset Reflections</h3>
+                    <p class="art-details">Watercolor on paper • 16" x 20"</p>
+                    <p class="art-price">$85</p>
+                    <a href="#" class="btn btn-buy">Purchase</a>
+                </div>
+            </div>
+            
+            <div class="art-item">
+                <div class="art-image">
+                    <span class="available-badge">Available</span>
+                    [Painting Image 2]
+                </div>
+                <div class="art-info">
+                    <h3 class="art-title">Urban Dreams</h3>
+                    <p class="art-details">Acrylic on canvas • 24" x 30"</p>
+                    <p class="art-price">$145</p>
+                    <a href="#" class="btn btn-buy">Purchase</a>
+                </div>
+            </div>
+            
+            <div class="art-item">
+                <div class="art-image">
+                    <span class="available-badge">Available</span>
+                    [Painting Image 3]
+                </div>
+                <div class="art-info">
+                    <h3 class="art-title">Garden Whispers</h3>
+                    <p class="art-details">Watercolor on paper • 12" x 16"</p>
+                    <p class="art-price">$65</p>
+                    <a href="#" class="btn btn-buy">Purchase</a>
+                </div>
+            </div>
+            
+            <div class="art-item">
+                <div class="art-image">
+                    <span class="available-badge">Available</span>
+                    [Painting Image 4]
+                </div>
+                <div class="art-info">
+                    <h3 class="art-title">Ocean Breeze</h3>
+                    <p class="art-details">Acrylic on canvas • 20" x 24"</p>
+                    <p class="art-price">$120</p>
+                    <a href="#" class="btn btn-buy">Purchase</a>
+                </div>
+            </div>
+            
+            <div class="art-item">
+                <div class="art-image">
+                    <span class="available-badge">Available</span>
+                    [Painting Image 5]
+                </div>
+                <div class="art-info">
+                    <h3 class="art-title">Mountain Mist</h3>
+                    <p class="art-details">Watercolor on paper • 18" x 24"</p>
+                    <p class="art-price">$95</p>
+                    <a href="#" class="btn btn-buy">Purchase</a>
+                </div>
+            </div>
+            
+            <div class="art-item">
+                <div class="art-image">
+                    <span class="available-badge">Available</span>
+                    [Painting Image 6]
+                </div>
+                <div class="art-info">
+                    <h3 class="art-title">Abstract Joy</h3>
+                    <p class="art-details">Acrylic on canvas • 30" x 40"</p>
+                    <p class="art-price">$150</p>
+                    <a href="#" class="btn btn-buy">Purchase</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="section-header">
+            <div class="section-tag">About Me</div>
+            <h2 class="section-title">Where Tech Meets Art</h2>
+            <p class="section-subtitle">Two decades of software development taught me precision. A lifetime of painting taught me vision. Together, they create something unique.</p>
+        </div>
+        
+        <div class="about-content">
+            <div class="about-text">
+                <p>I spent 20 years building software solutions before transitioning to visual content creation. That technical foundation gives me a unique advantage: I understand both the creative and technical sides of digital content.</p>
+                
+                <p>Based in Melbourne, I work with startups, healthcare organizations, and small businesses to create content that performs. Whether it's a social media campaign, video production, or brand visuals, I approach every project with the same attention to detail I learned in software development.</p>
+                
+                <p>My art practice keeps me creatively sharp. With over 200 original paintings created, I bring that same artistic sensibility to commercial work, ensuring every piece is not just functional, but beautiful.</p>
+                
+                <div class="skills-list">
+                    <div class="skill-item">
+                        <strong>Visual Content</strong>
+                        Social media graphics, video editing, motion graphics, brand design
+                    </div>
+                    <div class="skill-item">
+                        <strong>Technical Skills</strong>
+                        HTML/CSS/JS, WordPress, Adobe Creative Suite, Final Cut Pro
+                    </div>
+                    <div class="skill-item">
+                        <strong>Original Art</strong>
+                        Watercolor, acrylic painting, mixed media, commission work
+                    </div>
+                    <div class="skill-item">
+                        <strong>Strategy</strong>
+                        Content planning, brand development, audience analysis
+                    </div>
+                </div>
+            </div>
+            
+            <div class="about-image">
+                [About Image]<br>
+                Studio/workspace photo or<br>
+                creative action shot
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="section-header">
+            <div class="section-tag">Let's Work Together</div>
+            <h2 class="section-title">Get In Touch</h2>
+            <p class="section-subtitle">Available for freelance projects, full-time opportunities, and art commissions.</p>
+        </div>
+        
+        <div class="contact-methods">
+            <div class="contact-method">
+                <h3>Email</h3>
+                <a href="mailto:your.email@example.com">your.email@example.com</a>
+            </div>
+            
+            <div class="contact-method">
+                <h3>LinkedIn</h3>
+                <a href="https://linkedin.com/in/yourprofile" target="_blank">Connect with me</a>
+            </div>
+            
+            <div class="contact-method">
+                <h3>Instagram</h3>
+                <a href="https://instagram.com/yourhandle" target="_blank">@yourhandle</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Your Name. All rights reserved. • Based in Melbourne, Australia</p>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add scroll-triggered animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe portfolio items and gallery items
+        document.querySelectorAll('.portfolio-item, .art-item').forEach((item, index) => {
+            item.style.opacity = '0';
+            item.style.transform = 'translateY(30px)';
+            item.style.transition = `all 0.6s ease ${index * 0.1}s`;
+            observer.observe(item);
+        });
+
+        // Placeholder for buy button functionality
+        // In production, integrate with Gumroad, Stripe, or your payment processor
+        document.querySelectorAll('.btn-buy').forEach(button => {
+            button.addEventListener('click', function(e) {
+                e.preventDefault();
+                alert('Payment integration needed here. Options:\n\n1. Gumroad (easiest)\n2. Stripe Checkout\n3. PayPal\n4. Link to Etsy shop\n\nSee implementation guide for details.');
+            });
+        });
+    </script>
+</body>
+</html>
