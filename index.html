@@ -6,58 +6,61 @@
     <title>Sonimi Studio | Visual Content Creator & Digital Artist</title>
     <meta name="description" content="Sonimi Studio - Melbourne-based visual content creator and digital artist specializing in social media content, video production, and original paintings.">
     <meta name="author" content="Sonimi Studio">
+    
     <!-- Open Graph -->
     <meta property="og:title" content="Sonimi Studio | Visual Content & Art">
     <meta property="og:description" content="Melbourne visual content creator specializing in social media, video, and original paintings">
     <meta property="og:url" content="https://sonimi-studio.netlify.app">
 
     <!-- Twitter Card -->
-    <meta name="twitter:title" content="Sonimi Studio | Visual Content & Art">    <link rel="preconnect" href="https://fonts.googleapis.com">
-<!-- Remove the old Google Fonts link and add: -->
-<link rel="stylesheet" href="https://use.typekit.net/aileron.css">
-<style>
-    @font-face {
-        font-family: 'Aileron';
-        src: url('https://cdn.jsdelivr.net/gh/sursly/aileron@master/Aileron-Regular.woff2') format('woff2'),
-             url('https://cdn.jsdelivr.net/gh/sursly/aileron@master/Aileron-Regular.woff') format('woff');
-        font-weight: 400;
-        font-style: normal;
-    }
-    @font-face {
-        font-family: 'Aileron';
-        src: url('https://cdn.jsdelivr.net/gh/sursly/aileron@master/Aileron-Light.woff2') format('woff2'),
-             url('https://cdn.jsdelivr.net/gh/sursly/aileron@master/Aileron-Light.woff') format('woff');
-        font-weight: 300;
-        font-style: normal;
-    }
-    @font-face {
-        font-family: 'Aileron';
-        src: url('https://cdn.jsdelivr.net/gh/sursly/aileron@master/Aileron-SemiBold.woff2') format('woff2'),
-             url('https://cdn.jsdelivr.net/gh/sursly/aileron@master/Aileron-SemiBold.woff') format('woff');
-        font-weight: 600;
-        font-style: normal;
-    }
-    @font-face {
-        font-family: 'Aileron';
-        src: url('https://cdn.jsdelivr.net/gh/sursly/aileron@master/Aileron-Bold.woff2') format('woff2'),
-             url('https://cdn.jsdelivr.net/gh/sursly/aileron@master/Aileron-Bold.woff') format('woff');
-        font-weight: 700;
-        font-style: normal;
-    }
-</style>
-
+    <meta name="twitter:title" content="Sonimi Studio | Visual Content & Art">
+    
     <style>
-      :root {
-    --color-primary: #1a1a1a;
-    --color-accent: #d4a574;
-    --color-secondary: #4a5f4e;
-    --color-light: #f5f3ef;
-    --color-white: #ffffff;
-    --color-gray: #6b6b6b;
-    --font-display: 'Aileron', sans-serif;    /* Changed */
-    --font-body: 'Aileron', sans-serif;       /* Changed */
-    --spacing-unit: 1.5rem;
-           }
+        /* Aileron Font Loading */
+        @font-face {
+            font-family: 'Aileron';
+            src: url('https://cdn.jsdelivr.net/gh/sursly/aileron@master/Aileron-Light.woff2') format('woff2'),
+                 url('https://cdn.jsdelivr.net/gh/sursly/aileron@master/Aileron-Light.woff') format('woff');
+            font-weight: 300;
+            font-style: normal;
+            font-display: swap;
+        }
+        @font-face {
+            font-family: 'Aileron';
+            src: url('https://cdn.jsdelivr.net/gh/sursly/aileron@master/Aileron-Regular.woff2') format('woff2'),
+                 url('https://cdn.jsdelivr.net/gh/sursly/aileron@master/Aileron-Regular.woff') format('woff');
+            font-weight: 400;
+            font-style: normal;
+            font-display: swap;
+        }
+        @font-face {
+            font-family: 'Aileron';
+            src: url('https://cdn.jsdelivr.net/gh/sursly/aileron@master/Aileron-SemiBold.woff2') format('woff2'),
+                 url('https://cdn.jsdelivr.net/gh/sursly/aileron@master/Aileron-SemiBold.woff') format('woff');
+            font-weight: 600;
+            font-style: normal;
+            font-display: swap;
+        }
+        @font-face {
+            font-family: 'Aileron';
+            src: url('https://cdn.jsdelivr.net/gh/sursly/aileron@master/Aileron-Bold.woff2') format('woff2'),
+                 url('https://cdn.jsdelivr.net/gh/sursly/aileron@master/Aileron-Bold.woff') format('woff');
+            font-weight: 700;
+            font-style: normal;
+            font-display: swap;
+        }
+        
+        :root {
+            --color-primary: #1a1a1a;
+            --color-accent: #d4a574;
+            --color-secondary: #4a5f4e;
+            --color-light: #f5f3ef;
+            --color-white: #ffffff;
+            --color-gray: #6b6b6b;
+            --font-display: 'Aileron', sans-serif;
+            --font-body: 'Aileron', sans-serif;
+            --spacing-unit: 1.5rem;
+        }
         
         * {
             margin: 0;
@@ -291,11 +294,13 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            color: var(--color-white);
-            font-family: var(--font-display);
-            font-size: 1.2rem;
-            text-align: center;
-            padding: 2rem;
+            overflow: hidden;
+        }
+        
+        .hero-image-placeholder img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
         
         /* Section Styling */
@@ -748,10 +753,9 @@
                     <strong>Visual Content & Art</strong>
                 </h1>
                 <p style="font-family: var(--font-display); font-size: 1.3rem; color: var(--color-accent); margin-bottom: 1rem;">
-                 Sonimi Studio, Melbourne
+                    Sonimi Studio, Melbourne
                 </p>
-                <p>I blend technical precision with creative vision to craft compelling digital content and original artwork for startups, healthcare organizations, and small businesses across Melbourne and beyond.
-                </p>
+                <p>I blend technical precision with creative vision to craft compelling digital content and original artwork for startups, healthcare organizations, and small businesses across Melbourne and beyond.</p>
                 
                 <div class="hero-stats">
                     <div class="stat">
@@ -776,7 +780,7 @@
             
             <div class="hero-image">
                 <div class="hero-image-placeholder">
-                   <img src="images/sonia_samimi.png" alt="Sonia Samimi">
+                    <img src="images/sonia_samimi.png" alt="Sonia Samimi">
                 </div>
             </div>
         </div>
@@ -792,7 +796,7 @@
         <div class="portfolio-grid">
             <div class="portfolio-item">
                 <div class="portfolio-image">
-                   
+                    [Project Image 1]
                 </div>
                 <div class="portfolio-info">
                     <div class="portfolio-category">Social Media Campaign</div>
@@ -803,7 +807,7 @@
             
             <div class="portfolio-item">
                 <div class="portfolio-image">
-                   
+                    [Project Image 2]
                 </div>
                 <div class="portfolio-info">
                     <div class="portfolio-category">Video Production</div>
@@ -814,7 +818,7 @@
             
             <div class="portfolio-item">
                 <div class="portfolio-image">
-                   
+                    [Project Image 3]
                 </div>
                 <div class="portfolio-info">
                     <div class="portfolio-category">Brand Design</div>
@@ -825,7 +829,7 @@
             
             <div class="portfolio-item">
                 <div class="portfolio-image">
-                   
+                    [Project Image 4]
                 </div>
                 <div class="portfolio-info">
                     <div class="portfolio-category">Content Strategy</div>
@@ -1002,10 +1006,10 @@
                 <a href="mailto:sonia.samimi@gmail.com">sonia.samimi@gmail.com</a>
             </div>
             
-                              <div class="contact-method">
-                                           <h3>YouTube</h3>
-                                          <a href="https://www.youtube.com/@sonimi-studio" target="_blank">Sonimi Studio</a>
-                                </div>
+            <div class="contact-method">
+                <h3>YouTube</h3>
+                <a href="https://www.youtube.com/@sonimi-studio" target="_blank">Sonimi Studio</a>
+            </div>
 
             <div class="contact-method">
                 <h3>LinkedIn</h3>
@@ -1014,7 +1018,7 @@
             
             <div class="contact-method">
                 <h3>Instagram</h3>
-                <a href=https://www.instagram.com/sonia.samimi/" target="_blank">@sonia.samimi</a>
+                <a href="https://www.instagram.com/sonia.samimi/" target="_blank">@sonia.samimi</a>
             </div>
         </div>
     </section>
@@ -1062,7 +1066,6 @@
         });
 
         // Placeholder for buy button functionality
-        // In production, integrate with Gumroad, Stripe, or your payment processor
         document.querySelectorAll('.btn-buy').forEach(button => {
             button.addEventListener('click', function(e) {
                 e.preventDefault();
