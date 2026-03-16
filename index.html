@@ -3,75 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sonimi Studio | Visual Content Creator & Digital Artist</title>
-    <meta name="description" content="Sonimi Studio - Melbourne-based visual content creator and digital artist specializing in social media content, video production, and original paintings.">
-    <meta name="author" content="Sonimi Studio">
-    
-    <!-- Open Graph -->
-    <meta property="og:title" content="Sonimi Studio | Visual Content & Art">
-    <meta property="og:description" content="Melbourne visual content creator specializing in social media, video, and original paintings">
-    <meta property="og:url" content="https://sonimi-studio.netlify.app">
-
-    <!-- Twitter Card -->
-    <meta name="twitter:title" content="Sonimi Studio | Visual Content & Art">
+    <title>Sonimi Studio | Digital Content Specialist | SEO & Marketing | Melbourne</title>
+    <meta name="description" content="Certified digital content specialist in Melbourne. HubSpot SEO, Google Analytics certified. Visual content creation, social media marketing, and marketing automation.">
     
     <style>
-        /* Aileron Font Loading */
         @font-face {
             font-family: 'Aileron';
-            src: url('https://cdn.jsdelivr.net/gh/sursly/aileron@master/Aileron-Light.woff2') format('woff2'),
-                 url('https://cdn.jsdelivr.net/gh/sursly/aileron@master/Aileron-Light.woff') format('woff');
+            src: url('https://cdn.jsdelivr.net/gh/sursly/aileron@master/Aileron-Light.woff2') format('woff2');
             font-weight: 300;
-            font-style: normal;
             font-display: swap;
         }
         @font-face {
             font-family: 'Aileron';
-            src: url('https://cdn.jsdelivr.net/gh/sursly/aileron@master/Aileron-Regular.woff2') format('woff2'),
-                 url('https://cdn.jsdelivr.net/gh/sursly/aileron@master/Aileron-Regular.woff') format('woff');
+            src: url('https://cdn.jsdelivr.net/gh/sursly/aileron@master/Aileron-Regular.woff2') format('woff2');
             font-weight: 400;
-            font-style: normal;
             font-display: swap;
         }
         @font-face {
             font-family: 'Aileron';
-            src: url('https://cdn.jsdelivr.net/gh/sursly/aileron@master/Aileron-SemiBold.woff2') format('woff2'),
-                 url('https://cdn.jsdelivr.net/gh/sursly/aileron@master/Aileron-SemiBold.woff') format('woff');
+            src: url('https://cdn.jsdelivr.net/gh/sursly/aileron@master/Aileron-SemiBold.woff2') format('woff2');
             font-weight: 600;
-            font-style: normal;
             font-display: swap;
         }
         @font-face {
             font-family: 'Aileron';
-            src: url('https://cdn.jsdelivr.net/gh/sursly/aileron@master/Aileron-Bold.woff2') format('woff2'),
-                 url('https://cdn.jsdelivr.net/gh/sursly/aileron@master/Aileron-Bold.woff') format('woff');
+            src: url('https://cdn.jsdelivr.net/gh/sursly/aileron@master/Aileron-Bold.woff2') format('woff2');
             font-weight: 700;
-            font-style: normal;
             font-display: swap;
         }
         
         :root {
-            --color-primary: #1a1a1a;
-            --color-accent: #d4a574;
-            --color-secondary: #4a5f4e;
-            --color-light: #f5f3ef;
+            --color-primary: #1e2d47;
+            --color-accent: #c9af8e;
+            --color-secondary: #4a5568;
+            --color-light: #e8e4dd;
             --color-white: #ffffff;
-            --color-gray: #6b6b6b;
+            --color-gray: #8b8b8b;
             --font-display: 'Aileron', sans-serif;
             --font-body: 'Aileron', sans-serif;
-            --spacing-unit: 1.5rem;
         }
         
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
         
         body {
             font-family: var(--font-body);
             color: var(--color-primary);
-            background-color: var(--color-light);
+            background: var(--color-light);
             line-height: 1.6;
             overflow-x: hidden;
         }
@@ -83,15 +60,14 @@
             left: 0;
             right: 0;
             z-index: 1000;
-            background: rgba(245, 243, 239, 0.95);
+            background: rgba(232, 228, 221, 0.98);
             backdrop-filter: blur(10px);
             padding: 1.5rem 3rem;
-            border-bottom: 1px solid rgba(212, 165, 116, 0.2);
             animation: slideDown 0.8s ease-out;
         }
         
         nav .container {
-            max-width: 1400px;
+            max-width: 1200px;
             margin: 0 auto;
             display: flex;
             justify-content: space-between;
@@ -100,12 +76,14 @@
         
         nav .logo {
             font-family: var(--font-display);
-            font-size: 1.5rem;
-            font-weight: 600;
+            font-size: 1.1rem;
+            font-weight: 400;
             color: var(--color-primary);
             text-decoration: none;
-            letter-spacing: 0.5px;
+            text-transform: lowercase;
         }
+        
+        nav .logo span { font-weight: 700; }
         
         nav ul {
             display: flex;
@@ -116,61 +94,60 @@
         nav a {
             color: var(--color-primary);
             text-decoration: none;
-            font-size: 0.95rem;
-            font-weight: 400;
-            letter-spacing: 0.5px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
             transition: color 0.3s ease;
-            position: relative;
         }
         
-        nav a:hover {
-            color: var(--color-accent);
-        }
+        nav a:hover { color: var(--color-accent); }
         
-        nav a::after {
-            content: '';
-            position: absolute;
-            bottom: -5px;
-            left: 0;
-            width: 0;
-            height: 1px;
-            background: var(--color-accent);
-            transition: width 0.3s ease;
-        }
-        
-        nav a:hover::after {
-            width: 100%;
-        }
-        
-        /* Hero Section */
+        /* Hero Section - Clean Design */
         .hero {
             margin-top: 80px;
-            min-height: 90vh;
+            min-height: 85vh;
             display: flex;
             align-items: center;
-            padding: 3rem;
+            padding: 4rem 3rem;
             position: relative;
-            background: linear-gradient(135deg, var(--color-light) 0%, #e8e5df 100%);
+            background: var(--color-light);
+            overflow: hidden;
         }
         
+        /* Subtle decorative elements */
         .hero::before {
             content: '';
             position: absolute;
-            top: 0;
-            right: 0;
-            width: 50%;
-            height: 100%;
-            background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M 40 0 L 0 0 0 40" fill="none" stroke="%23d4a574" stroke-width="0.5" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
-            opacity: 0.4;
-            animation: fadeIn 1.5s ease-out;
+            top: -80px;
+            right: -80px;
+            width: 350px;
+            height: 350px;
+            background: var(--color-accent);
+            border-radius: 50%;
+            opacity: 0.2;
+            z-index: 0;
+        }
+        
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: -100px;
+            left: -100px;
+            width: 400px;
+            height: 400px;
+            background: var(--color-primary);
+            border-radius: 50%;
+            opacity: 0.1;
+            z-index: 0;
         }
         
         .hero .container {
-            max-width: 1400px;
+            max-width: 1200px;
             margin: 0 auto;
             width: 100%;
             display: grid;
-            grid-template-columns: 1.2fr 1fr;
+            grid-template-columns: 1fr 280px;
             gap: 4rem;
             align-items: center;
             position: relative;
@@ -179,26 +156,35 @@
         
         .hero-content h1 {
             font-family: var(--font-display);
-            font-size: 5rem;
+            font-size: 1.1rem;
             font-weight: 300;
-            line-height: 1.1;
-            margin-bottom: 1.5rem;
-            color: var(--color-primary);
+            line-height: 1.2;
+            margin-bottom: 0.5rem;
+            color: var(--color-accent);
             animation: slideUp 0.8s ease-out 0.2s backwards;
+            letter-spacing: 4px;
+            text-transform: uppercase;
         }
         
-        .hero-content h1 strong {
+        .hero-content h2 {
+            font-family: var(--font-display);
+            font-size: 3.2rem;
             font-weight: 700;
-            color: var(--color-secondary);
-            display: block;
+            line-height: 1.15;
+            margin-bottom: 1.5rem;
+            color: var(--color-primary);
+            animation: slideUp 0.8s ease-out 0.3s backwards;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
         
         .hero-content p {
-            font-size: 1.25rem;
+            font-size: 1.05rem;
             color: var(--color-gray);
-            margin-bottom: 2rem;
+            margin-bottom: 2.5rem;
             line-height: 1.8;
             animation: slideUp 0.8s ease-out 0.4s backwards;
+            max-width: 600px;
         }
         
         .hero-stats {
@@ -209,25 +195,26 @@
         }
         
         .stat {
-            border-left: 2px solid var(--color-accent);
-            padding-left: 1rem;
+            border-left: 3px solid var(--color-accent);
+            padding-left: 1.5rem;
         }
         
         .stat-number {
             font-family: var(--font-display);
-            font-size: 2.5rem;
-            font-weight: 600;
-            color: var(--color-secondary);
+            font-size: 2.8rem;
+            font-weight: 700;
+            color: var(--color-primary);
             display: block;
             line-height: 1;
         }
         
         .stat-label {
-            font-size: 0.9rem;
+            font-size: 0.7rem;
             color: var(--color-gray);
             text-transform: uppercase;
-            letter-spacing: 1px;
+            letter-spacing: 1.5px;
             margin-top: 0.5rem;
+            font-weight: 400;
         }
         
         .cta-buttons {
@@ -237,26 +224,26 @@
         }
         
         .btn {
-            padding: 1rem 2.5rem;
+            padding: 1.1rem 2.5rem;
             text-decoration: none;
-            font-weight: 500;
+            font-weight: 600;
             letter-spacing: 0.5px;
             transition: all 0.3s ease;
-            border: none;
             cursor: pointer;
-            font-size: 1rem;
-            display: inline-block;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            border: none;
         }
         
         .btn-primary {
-            background: var(--color-secondary);
+            background: var(--color-primary);
             color: var(--color-white);
         }
         
         .btn-primary:hover {
-            background: #3a4f3e;
+            background: #2a3d5f;
             transform: translateY(-2px);
-            box-shadow: 0 8px 20px rgba(74, 95, 78, 0.3);
+            box-shadow: 0 8px 20px rgba(30, 45, 71, 0.3);
         }
         
         .btn-secondary {
@@ -271,33 +258,38 @@
             transform: translateY(-2px);
         }
         
+        /* Hero Image - Clean circular photo */
         .hero-image {
             position: relative;
             animation: fadeIn 1s ease-out 0.4s backwards;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
         
-        .hero-image::before {
+        .hero-image-wrapper {
+            width: 280px;
+            height: 280px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 6px solid var(--color-accent);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+            position: relative;
+        }
+        
+        .hero-image-wrapper::after {
             content: '';
             position: absolute;
-            top: -20px;
-            right: -20px;
-            width: 100%;
-            height: 100%;
-            border: 2px solid var(--color-accent);
+            top: -15px;
+            right: -15px;
+            width: calc(100% + 10px);
+            height: calc(100% + 10px);
+            border: 3px solid var(--color-primary);
+            border-radius: 50%;
             z-index: -1;
         }
         
-        .hero-image-placeholder {
-            width: 100%;
-            aspect-ratio: 3/4;
-            background: linear-gradient(135deg, var(--color-secondary) 0%, var(--color-accent) 100%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            overflow: hidden;
-        }
-        
-        .hero-image-placeholder img {
+        .hero-image img {
             width: 100%;
             height: 100%;
             object-fit: cover;
@@ -305,8 +297,8 @@
         
         /* Section Styling */
         section {
-            padding: 6rem 3rem;
-            max-width: 1400px;
+            padding: 5rem 3rem;
+            max-width: 1200px;
             margin: 0 auto;
         }
         
@@ -326,31 +318,31 @@
         
         .section-title {
             font-family: var(--font-display);
-            font-size: 3.5rem;
-            font-weight: 600;
+            font-size: 2.8rem;
+            font-weight: 700;
             color: var(--color-primary);
             margin-bottom: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
         
         .section-subtitle {
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             color: var(--color-gray);
             max-width: 700px;
             margin: 0 auto;
             line-height: 1.8;
         }
         
-        /* Portfolio Grid */
+        /* Portfolio Grid - 3 columns */
         .portfolio-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 2rem;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
             margin-top: 3rem;
         }
         
         .portfolio-item {
-            position: relative;
-            overflow: hidden;
             background: var(--color-white);
             transition: transform 0.4s ease, box-shadow 0.4s ease;
             cursor: pointer;
@@ -363,50 +355,38 @@
         
         .portfolio-image {
             width: 100%;
-            aspect-ratio: 4/3;
-            background: linear-gradient(135deg, #e0ddd5 0%, #c4bfb3 100%);
+            aspect-ratio: 9/16;
+            background: linear-gradient(135deg, #d4cdc0 0%, #b8b0a3 100%);
             display: flex;
             align-items: center;
             justify-content: center;
             color: var(--color-gray);
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             position: relative;
             overflow: hidden;
         }
         
-        .portfolio-image::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: var(--color-secondary);
-            opacity: 0;
-            transition: opacity 0.4s ease;
+        .portfolio-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
         
-        .portfolio-item:hover .portfolio-image::after {
-            opacity: 0.1;
-        }
-        
-        .portfolio-info {
-            padding: 1.5rem;
-        }
+        .portfolio-info { padding: 1.5rem; }
         
         .portfolio-category {
-            font-size: 0.8rem;
+            font-size: 0.75rem;
             text-transform: uppercase;
             letter-spacing: 1.5px;
             color: var(--color-accent);
-            font-weight: 600;
+            font-weight: 700;
             margin-bottom: 0.5rem;
         }
         
         .portfolio-title {
             font-family: var(--font-display);
-            font-size: 1.5rem;
-            font-weight: 600;
+            font-size: 1.3rem;
+            font-weight: 700;
             color: var(--color-primary);
             margin-bottom: 0.5rem;
         }
@@ -417,14 +397,110 @@
             line-height: 1.6;
         }
         
-        /* Art Gallery */
-        #art-gallery {
-            background: var(--color-white);
+        /* Services Section */
+        #services { background: var(--color-white); }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
         }
+        
+        .service-card {
+            background: var(--color-light);
+            padding: 2.5rem 2rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-top: 4px solid var(--color-accent);
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .service-card h3 {
+            font-family: var(--font-display);
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--color-primary);
+            margin-bottom: 1.5rem;
+        }
+        
+        .service-card ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .service-card li {
+            padding: 0.4rem 0 0.4rem 1.5rem;
+            position: relative;
+            color: var(--color-gray);
+            font-size: 0.95rem;
+        }
+        
+        .service-card li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--color-accent);
+            font-weight: 700;
+        }
+        
+        /* Certifications Section */
+        #certifications { background: var(--color-light); }
+        
+        .certifications-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .cert-card {
+            background: var(--color-white);
+            padding: 2rem 1.5rem;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-radius: 8px;
+        }
+        
+        .cert-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .cert-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .cert-card h3 {
+            font-family: var(--font-display);
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--color-primary);
+            margin-bottom: 0.5rem;
+        }
+        
+        .cert-issuer {
+            color: var(--color-accent);
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+        }
+        
+        .cert-date {
+            color: var(--color-gray);
+            font-size: 0.8rem;
+        }
+        
+        /* Art Gallery */
+        #art-gallery { background: var(--color-white); }
         
         .gallery-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
             gap: 2.5rem;
             margin-top: 3rem;
         }
@@ -432,24 +508,21 @@
         .art-item {
             background: var(--color-light);
             transition: transform 0.3s ease;
-            position: relative;
         }
         
-        .art-item:hover {
-            transform: scale(1.02);
-        }
+        .art-item:hover { transform: scale(1.02); }
         
         .art-image {
             width: 100%;
             aspect-ratio: 3/4;
-            background: linear-gradient(135deg, #d4a574 0%, #8b7355 100%);
+            background: linear-gradient(135deg, #c9af8e 0%, #a89576 100%);
             display: flex;
             align-items: center;
             justify-content: center;
             color: var(--color-white);
-            font-size: 0.9rem;
             position: relative;
             overflow: hidden;
+            font-size: 0.85rem;
         }
         
         .available-badge {
@@ -458,34 +531,32 @@
             right: 15px;
             background: var(--color-secondary);
             color: var(--color-white);
-            padding: 0.4rem 1rem;
-            font-size: 0.75rem;
+            padding: 0.4rem 0.8rem;
+            font-size: 0.7rem;
             text-transform: uppercase;
             letter-spacing: 1px;
-            font-weight: 600;
+            font-weight: 700;
         }
         
-        .art-info {
-            padding: 1.5rem;
-        }
+        .art-info { padding: 1.5rem; }
         
         .art-title {
             font-family: var(--font-display);
-            font-size: 1.3rem;
-            font-weight: 600;
+            font-size: 1.2rem;
+            font-weight: 700;
             color: var(--color-primary);
             margin-bottom: 0.5rem;
         }
         
         .art-details {
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             color: var(--color-gray);
             margin-bottom: 1rem;
         }
         
         .art-price {
-            font-size: 1.5rem;
-            font-weight: 600;
+            font-size: 1.4rem;
+            font-weight: 700;
             color: var(--color-secondary);
             margin-bottom: 1rem;
         }
@@ -495,10 +566,12 @@
             text-align: center;
             background: var(--color-accent);
             color: var(--color-white);
+            padding: 1rem;
+            font-size: 0.85rem;
         }
         
         .btn-buy:hover {
-            background: #c19563;
+            background: #b89d7e;
             transform: translateY(-2px);
         }
         
@@ -508,28 +581,19 @@
             color: var(--color-white);
         }
         
-        #about .section-tag {
-            color: var(--color-accent);
-        }
-        
-        #about .section-title {
-            color: var(--color-white);
-        }
-        
-        #about .section-subtitle {
-            color: rgba(255, 255, 255, 0.8);
-        }
+        #about .section-tag { color: var(--color-accent); }
+        #about .section-title { color: var(--color-white); }
+        #about .section-subtitle { color: rgba(255, 255, 255, 0.8); }
         
         .about-content {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
+            grid-template-columns: 1fr;
+            gap: 3rem;
             margin-top: 3rem;
-            align-items: center;
         }
         
         .about-text p {
-            font-size: 1.1rem;
+            font-size: 1.05rem;
             line-height: 1.9;
             margin-bottom: 1.5rem;
             color: rgba(255, 255, 255, 0.9);
@@ -537,34 +601,25 @@
         
         .skills-list {
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 1rem;
             margin-top: 2rem;
         }
         
         .skill-item {
             background: rgba(255, 255, 255, 0.05);
-            padding: 1rem;
+            padding: 1.2rem;
             border-left: 3px solid var(--color-accent);
         }
         
         .skill-item strong {
             display: block;
             color: var(--color-accent);
-            margin-bottom: 0.3rem;
-            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+            font-size: 0.85rem;
             text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-        
-        .about-image {
-            background: rgba(255, 255, 255, 0.05);
-            aspect-ratio: 1;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.1rem;
-            border: 2px solid var(--color-accent);
+            letter-spacing: 1.5px;
+            font-weight: 700;
         }
         
         /* Contact Section */
@@ -574,17 +629,9 @@
             text-align: center;
         }
         
-        #contact .section-tag {
-            color: var(--color-accent);
-        }
-        
-        #contact .section-title {
-            color: var(--color-white);
-        }
-        
-        #contact .section-subtitle {
-            color: rgba(255, 255, 255, 0.9);
-        }
+        #contact .section-tag { color: var(--color-accent); }
+        #contact .section-title { color: var(--color-white); }
+        #contact .section-subtitle { color: rgba(255, 255, 255, 0.9); }
         
         .contact-methods {
             display: flex;
@@ -596,32 +643,29 @@
         
         .contact-method {
             background: rgba(255, 255, 255, 0.1);
-            padding: 2rem 3rem;
-            min-width: 250px;
+            padding: 2rem 2.5rem;
+            min-width: 220px;
             transition: background 0.3s ease;
         }
         
-        .contact-method:hover {
-            background: rgba(255, 255, 255, 0.15);
-        }
+        .contact-method:hover { background: rgba(255, 255, 255, 0.15); }
         
         .contact-method h3 {
             font-family: var(--font-display);
-            font-size: 1.5rem;
+            font-size: 1.3rem;
             margin-bottom: 1rem;
             color: var(--color-accent);
+            font-weight: 700;
         }
         
         .contact-method a {
             color: var(--color-white);
             text-decoration: none;
-            font-size: 1.1rem;
+            font-size: 1rem;
             transition: color 0.3s ease;
         }
         
-        .contact-method a:hover {
-            color: var(--color-accent);
-        }
+        .contact-method a:hover { color: var(--color-accent); }
         
         /* Footer */
         footer {
@@ -629,115 +673,61 @@
             color: rgba(255, 255, 255, 0.7);
             text-align: center;
             padding: 2rem;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
         }
         
         /* Animations */
         @keyframes slideDown {
-            from {
-                transform: translateY(-100%);
-                opacity: 0;
-            }
-            to {
-                transform: translateY(0);
-                opacity: 1;
-            }
+            from { transform: translateY(-100%); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
         }
         
         @keyframes slideUp {
-            from {
-                transform: translateY(40px);
-                opacity: 0;
-            }
-            to {
-                transform: translateY(0);
-                opacity: 1;
-            }
+            from { transform: translateY(40px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
         }
         
         @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
-            to {
-                opacity: 1;
-            }
+            from { opacity: 0; }
+            to { opacity: 1; }
         }
         
         /* Responsive */
         @media (max-width: 968px) {
-            nav {
-                padding: 1rem 2rem;
-            }
-            
-            nav ul {
-                gap: 1.5rem;
-            }
-            
-            .hero .container {
-                grid-template-columns: 1fr;
-                gap: 3rem;
-            }
-            
-            .hero-content h1 {
-                font-size: 3.5rem;
-            }
-            
-            .section-title {
-                font-size: 2.5rem;
-            }
-            
-            .portfolio-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .about-content {
-                grid-template-columns: 1fr;
-            }
-            
-            .skills-list {
-                grid-template-columns: 1fr;
-            }
+            nav { padding: 1.2rem 2rem; }
+            nav ul { gap: 2rem; font-size: 0.8rem; }
+            .hero { margin-top: 70px; padding: 3rem 2rem; }
+            .hero .container { grid-template-columns: 1fr; gap: 3rem; }
+            .hero-image { order: -1; }
+            .hero-image-wrapper { width: 220px; height: 220px; }
+            .hero-content h2 { font-size: 2.5rem; }
+            .section-title { font-size: 2.2rem; }
+            .portfolio-grid { grid-template-columns: repeat(2, 1fr); }
+            .services-grid { grid-template-columns: 1fr; }
         }
         
         @media (max-width: 640px) {
-            nav ul {
-                display: none;
-            }
-            
-            .hero {
-                padding: 2rem 1.5rem;
-            }
-            
-            .hero-content h1 {
-                font-size: 2.5rem;
-            }
-            
-            .hero-stats {
-                flex-direction: column;
-                gap: 1.5rem;
-            }
-            
-            .cta-buttons {
-                flex-direction: column;
-            }
-            
-            section {
-                padding: 4rem 1.5rem;
-            }
-            
-            .section-title {
-                font-size: 2rem;
-            }
+            nav ul { display: none; }
+            .hero { padding: 2rem 1.5rem; }
+            .hero-image-wrapper { width: 200px; height: 200px; }
+            .hero-content h1 { font-size: 0.95rem; }
+            .hero-content h2 { font-size: 2rem; }
+            .hero-stats { flex-direction: column; gap: 1.5rem; }
+            .cta-buttons { flex-direction: column; }
+            section { padding: 4rem 1.5rem; }
+            .section-title { font-size: 1.8rem; }
+            .portfolio-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
 <body>
     <nav>
         <div class="container">
-            <a href="#" class="logo">SONIMI Studio</a>
+            <a href="#" class="logo"><span>sonimi</span> Studio</a>
             <ul>
                 <li><a href="#work">Work</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#certifications">Certifications</a></li>
                 <li><a href="#art-gallery">Art</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#contact">Contact</a></li>
@@ -748,14 +738,9 @@
     <section class="hero">
         <div class="container">
             <div class="hero-content">
-                <h1>
-                    Sonimi Samimi
-                    <strong>Visual Content & Art</strong>
-                </h1>
-                <p style="font-family: var(--font-display); font-size: 1.3rem; color: var(--color-accent); margin-bottom: 1rem;">
-                    Sonimi Studio, Melbourne
-                </p>
-                <p>I blend technical precision with creative vision to craft compelling digital content and original artwork for startups, healthcare organizations, and small businesses across Melbourne and beyond.</p>
+                <h1>Sonia Samimi</h1>
+                <h2>Digital Content & Marketing</h2>
+                <p>Certified digital content specialist combining creative design, SEO strategy, and marketing automation. With 20 years of technical expertise and certifications from HubSpot, Google Analytics, and RMIT University, I help businesses grow through data-driven content and compelling visuals.</p>
                 
                 <div class="hero-stats">
                     <div class="stat">
@@ -767,8 +752,8 @@
                         <span class="stat-label">Original Paintings</span>
                     </div>
                     <div class="stat">
-                        <span class="stat-number">∞</span>
-                        <span class="stat-label">Creative Ideas</span>
+                        <span class="stat-number">4</span>
+                        <span class="stat-label">Certifications</span>
                     </div>
                 </div>
                 
@@ -779,7 +764,7 @@
             </div>
             
             <div class="hero-image">
-                <div class="hero-image-placeholder">
+                <div class="hero-image-wrapper">
                     <img src="images/sonia_samimi.png" alt="Sonia Samimi">
                 </div>
             </div>
@@ -789,75 +774,155 @@
     <section id="work">
         <div class="section-header">
             <div class="section-tag">Portfolio</div>
-            <h2 class="section-title">Visual Content Work</h2>
-            <p class="section-subtitle">From social media campaigns to video production, I create content that engages, informs, and converts.</p>
+            <h2 class="section-title">Digital Content Work</h2>
+            <p class="section-subtitle">Social media graphics, video editing, and content creation using Canva, CapCut, and creative storytelling.</p>
         </div>
         
         <div class="portfolio-grid">
             <div class="portfolio-item">
-                <div class="portfolio-image">
-                    [Project Image 1]
-                </div>
+                <div class="portfolio-image">[Instagram Post]</div>
                 <div class="portfolio-info">
-                    <div class="portfolio-category">Social Media Campaign</div>
-                    <h3 class="portfolio-title">Healthcare Awareness Series</h3>
-                    <p class="portfolio-description">30-day content series driving 200% engagement increase for medical practice.</p>
+                    <div class="portfolio-category">Social Media Design</div>
+                    <h3 class="portfolio-title">Instagram & Facebook Graphics</h3>
+                    <p class="portfolio-description">Eye-catching social media posts designed in Canva for clients and personal branding.</p>
                 </div>
             </div>
             
             <div class="portfolio-item">
-                <div class="portfolio-image">
-                    [Project Image 2]
-                </div>
+                <div class="portfolio-image">[Painting Timelapse]</div>
                 <div class="portfolio-info">
-                    <div class="portfolio-category">Video Production</div>
-                    <h3 class="portfolio-title">Startup Product Launch</h3>
-                    <p class="portfolio-description">Complete video package from concept to delivery for tech startup launch.</p>
+                    <div class="portfolio-category">Video Content</div>
+                    <h3 class="portfolio-title">Painting Timelapse Videos</h3>
+                    <p class="portfolio-description">Mesmerizing timelapse videos showcasing the creative process on YouTube.</p>
                 </div>
             </div>
             
             <div class="portfolio-item">
-                <div class="portfolio-image">
-                    [Project Image 3]
-                </div>
+                <div class="portfolio-image">[Video Editing]</div>
                 <div class="portfolio-info">
-                    <div class="portfolio-category">Brand Design</div>
-                    <h3 class="portfolio-title">Small Business Rebrand</h3>
-                    <p class="portfolio-description">Full visual identity redesign including logo, graphics, and social templates.</p>
+                    <div class="portfolio-category">Video Editing</div>
+                    <h3 class="portfolio-title">CapCut Video Production</h3>
+                    <p class="portfolio-description">Dynamic short-form videos edited for Instagram Reels and Facebook Stories.</p>
                 </div>
             </div>
             
             <div class="portfolio-item">
-                <div class="portfolio-image">
-                    [Project Image 4]
-                </div>
+                <div class="portfolio-image">[YouTube Channel]</div>
                 <div class="portfolio-info">
-                    <div class="portfolio-category">Content Strategy</div>
-                    <h3 class="portfolio-title">E-commerce Visual Content</h3>
-                    <p class="portfolio-description">Monthly content calendar and asset creation for online retail brand.</p>
+                    <div class="portfolio-category">Content Creation</div>
+                    <h3 class="portfolio-title">Sonimi Studio YouTube</h3>
+                    <p class="portfolio-description">Art-focused channel featuring tutorials, timelapses, and creative process videos.</p>
                 </div>
             </div>
             
             <div class="portfolio-item">
-                <div class="portfolio-image">
-                    [Project Image 5]
-                </div>
+                <div class="portfolio-image">[Instagram Story]</div>
                 <div class="portfolio-info">
-                    <div class="portfolio-category">Motion Graphics</div>
-                    <h3 class="portfolio-title">Explainer Video Series</h3>
-                    <p class="portfolio-description">Animated explainer videos simplifying complex healthcare concepts.</p>
+                    <div class="portfolio-category">Story Design</div>
+                    <h3 class="portfolio-title">Instagram Stories & Reels</h3>
+                    <p class="portfolio-description">Engaging story graphics and short video content designed in Canva.</p>
                 </div>
             </div>
             
             <div class="portfolio-item">
-                <div class="portfolio-image">
-                    [Project Image 6]
-                </div>
+                <div class="portfolio-image">[n8n Workflow]</div>
                 <div class="portfolio-info">
-                    <div class="portfolio-category">Photography & Editing</div>
-                    <h3 class="portfolio-title">Product Photography</h3>
-                    <p class="portfolio-description">Professional product shoots and post-production for e-commerce clients.</p>
+                    <div class="portfolio-category">Marketing Automation</div>
+                    <h3 class="portfolio-title">AI-Powered Workflows</h3>
+                    <p class="portfolio-description">Automated content distribution and social scheduling using n8n and AI agents.</p>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services">
+        <div class="section-header">
+            <div class="section-tag">What I Offer</div>
+            <h2 class="section-title">Services & Solutions</h2>
+            <p class="section-subtitle">Comprehensive digital content and marketing services backed by professional certifications.</p>
+        </div>
+        
+        <div class="services-grid">
+            <div class="service-card">
+                <h3>🎨 Visual Content Creation</h3>
+                <ul>
+                    <li>Social media graphics & templates</li>
+                    <li>Video editing & motion graphics</li>
+                    <li>Brand design & visual identity</li>
+                    <li>Instagram/Facebook content</li>
+                    <li>YouTube thumbnail design</li>
+                </ul>
+            </div>
+            
+            <div class="service-card">
+                <h3>🔍 SEO & Content Strategy</h3>
+                <ul>
+                    <li>SEO audit & optimization</li>
+                    <li>Keyword research & planning</li>
+                    <li>Content marketing strategy</li>
+                    <li>Google Analytics setup</li>
+                    <li>Performance reporting</li>
+                </ul>
+            </div>
+            
+            <div class="service-card">
+                <h3>📱 Social Media Marketing</h3>
+                <ul>
+                    <li>Social media strategy</li>
+                    <li>Content calendar development</li>
+                    <li>Platform optimization</li>
+                    <li>Analytics & tracking</li>
+                    <li>Community management</li>
+                </ul>
+            </div>
+            
+            <div class="service-card">
+                <h3>🤖 Marketing Automation</h3>
+                <ul>
+                    <li>Workflow automation (n8n)</li>
+                    <li>AI-powered content workflows</li>
+                    <li>Multi-platform distribution</li>
+                    <li>Process optimization</li>
+                    <li>HubSpot integration</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="certifications">
+        <div class="section-header">
+            <div class="section-tag">Credentials</div>
+            <h2 class="section-title">Certifications & Training</h2>
+            <p class="section-subtitle">Professionally certified in digital marketing, SEO, analytics, and content strategy.</p>
+        </div>
+        
+        <div class="certifications-grid">
+            <div class="cert-card">
+                <div class="cert-icon">📊</div>
+                <h3>Google Analytics Certification</h3>
+                <p class="cert-issuer">Skillshop</p>
+                <p class="cert-date">Issued Feb 2026 · Expires Feb 2027</p>
+            </div>
+            
+            <div class="cert-card">
+                <div class="cert-icon">🔍</div>
+                <h3>SEO Certification</h3>
+                <p class="cert-issuer">HubSpot Academy</p>
+                <p class="cert-date">Issued Jan 2026 · Expires Feb 2027</p>
+            </div>
+            
+            <div class="cert-card">
+                <div class="cert-icon">📱</div>
+                <h3>Content & Social Media Marketing</h3>
+                <p class="cert-issuer">RMIT University</p>
+                <p class="cert-date">Issued Sep 2025</p>
+            </div>
+            
+            <div class="cert-card">
+                <div class="cert-icon">✍️</div>
+                <h3>Content Marketing</h3>
+                <p class="cert-issuer">HubSpot Academy</p>
+                <p class="cert-date">Issued Jan 2026 · Expires Feb 2028</p>
             </div>
         </div>
     </section>
@@ -873,7 +938,7 @@
             <div class="art-item">
                 <div class="art-image">
                     <span class="available-badge">Available</span>
-                    [Painting Image 1]
+                    [Painting 1]
                 </div>
                 <div class="art-info">
                     <h3 class="art-title">Sunset Reflections</h3>
@@ -886,7 +951,7 @@
             <div class="art-item">
                 <div class="art-image">
                     <span class="available-badge">Available</span>
-                    [Painting Image 2]
+                    [Painting 2]
                 </div>
                 <div class="art-info">
                     <h3 class="art-title">Urban Dreams</h3>
@@ -899,51 +964,12 @@
             <div class="art-item">
                 <div class="art-image">
                     <span class="available-badge">Available</span>
-                    [Painting Image 3]
+                    [Painting 3]
                 </div>
                 <div class="art-info">
                     <h3 class="art-title">Garden Whispers</h3>
                     <p class="art-details">Watercolor on paper • 12" x 16"</p>
                     <p class="art-price">$65</p>
-                    <a href="#" class="btn btn-buy">Purchase</a>
-                </div>
-            </div>
-            
-            <div class="art-item">
-                <div class="art-image">
-                    <span class="available-badge">Available</span>
-                    [Painting Image 4]
-                </div>
-                <div class="art-info">
-                    <h3 class="art-title">Ocean Breeze</h3>
-                    <p class="art-details">Acrylic on canvas • 20" x 24"</p>
-                    <p class="art-price">$120</p>
-                    <a href="#" class="btn btn-buy">Purchase</a>
-                </div>
-            </div>
-            
-            <div class="art-item">
-                <div class="art-image">
-                    <span class="available-badge">Available</span>
-                    [Painting Image 5]
-                </div>
-                <div class="art-info">
-                    <h3 class="art-title">Mountain Mist</h3>
-                    <p class="art-details">Watercolor on paper • 18" x 24"</p>
-                    <p class="art-price">$95</p>
-                    <a href="#" class="btn btn-buy">Purchase</a>
-                </div>
-            </div>
-            
-            <div class="art-item">
-                <div class="art-image">
-                    <span class="available-badge">Available</span>
-                    [Painting Image 6]
-                </div>
-                <div class="art-info">
-                    <h3 class="art-title">Abstract Joy</h3>
-                    <p class="art-details">Acrylic on canvas • 30" x 40"</p>
-                    <p class="art-price">$150</p>
                     <a href="#" class="btn btn-buy">Purchase</a>
                 </div>
             </div>
@@ -953,42 +979,37 @@
     <section id="about">
         <div class="section-header">
             <div class="section-tag">About Me</div>
-            <h2 class="section-title">Where Tech Meets Art</h2>
-            <p class="section-subtitle">Two decades of software development taught me precision. A lifetime of painting taught me vision. Together, they create something unique.</p>
+            <h2 class="section-title">Where Tech Meets Creativity</h2>
+            <p class="section-subtitle">Two decades of software development taught me precision. A lifetime of creating taught me vision. Professional certifications guide my strategy.</p>
         </div>
         
         <div class="about-content">
             <div class="about-text">
-                <p>I spent 20 years building software solutions before transitioning to visual content creation. That technical foundation gives me a unique advantage: I understand both the creative and technical sides of digital content.</p>
+                <p>I spent 20 years building software solutions before transitioning to digital content creation and marketing. That technical foundation gives me a unique advantage: I understand both the creative and analytical sides of digital marketing.</p>
                 
-                <p>Based in Melbourne, I work with startups, healthcare organizations, and small businesses to create content that performs. Whether it's a social media campaign, video production, or brand visuals, I approach every project with the same attention to detail I learned in software development.</p>
-                
-                <p>My art practice keeps me creatively sharp. With over 200 original paintings created, I bring that same artistic sensibility to commercial work, ensuring every piece is not just functional, but beautiful.</p>
+                <p>As a certified professional with credentials from HubSpot, Google Analytics, and RMIT University, I work with startups, healthcare organizations, and small businesses in Melbourne to create content that not only looks beautiful but performs. Whether it's an SEO-optimized campaign, social media content, or marketing automation workflow, I approach every project with attention to detail and measurable results.</p>
                 
                 <div class="skills-list">
                     <div class="skill-item">
                         <strong>Visual Content</strong>
-                        Social media graphics, video editing, motion graphics, brand design
+                        Social media graphics (Canva), video editing (CapCut), motion graphics, brand design
                     </div>
+                    
                     <div class="skill-item">
-                        <strong>Technical Skills</strong>
-                        HTML/CSS/JS, WordPress, Adobe Creative Suite, Final Cut Pro
+                        <strong>SEO & Analytics</strong>
+                        Google Analytics certified, HubSpot SEO, keyword research, performance tracking
                     </div>
+                    
                     <div class="skill-item">
-                        <strong>Original Art</strong>
-                        Watercolor, acrylic painting, mixed media, commission work
+                        <strong>Content Marketing</strong>
+                        RMIT certified, social media strategy, content planning, campaign development
                     </div>
+                    
                     <div class="skill-item">
-                        <strong>Strategy</strong>
-                        Content planning, brand development, audience analysis
+                        <strong>Technical & Automation</strong>
+                        HTML/CSS/JS, WordPress, n8n workflows, AI agents, 20 years development
                     </div>
                 </div>
-            </div>
-            
-            <div class="about-image">
-                [About Image]<br>
-                Studio/workspace photo or<br>
-                creative action shot
             </div>
         </div>
     </section>
@@ -997,13 +1018,13 @@
         <div class="section-header">
             <div class="section-tag">Let's Work Together</div>
             <h2 class="section-title">Get In Touch</h2>
-            <p class="section-subtitle">Available for freelance projects, full-time opportunities, and art commissions.</p>
+            <p class="section-subtitle">Available for digital content creation, SEO consulting, marketing automation, full-time opportunities, and art commissions.</p>
         </div>
         
         <div class="contact-methods">
             <div class="contact-method">
                 <h3>Email</h3>
-                <a href="mailto:sonia.samimi@gmail.com">sonia.samimi@gmail.com</a>
+                <a href="/cdn-cgi/l/email-protection#acdfc3c2c5cd82dfcdc1c5c1c5eccbc1cdc5c082cfc3c1"><span class="__cf_email__" data-cfemail="f1829e9f9890df82909c989c98b1969c90989ddf929e9c">[email&#160;protected]</span></a>
             </div>
             
             <div class="contact-method">
@@ -1013,7 +1034,7 @@
 
             <div class="contact-method">
                 <h3>LinkedIn</h3>
-                <a href="https://www.linkedin.com/in/sonia-samimi-bb554b28/" target="_blank">Connect with me</a>
+                <a href="https://www.linkedin.com/in/sonia-samimi-bb554b28/" target="_blank">Connect</a>
             </div>
             
             <div class="contact-method">
@@ -1024,54 +1045,32 @@
     </section>
 
     <footer>
-        <p>&copy; 2025 Sonimi Studio. All rights reserved. • Based in Melbourne, Australia</p>
+        <p>&copy; 2025 Sonimi Studio • Digital Content Specialist • Melbourne, Australia</p>
     </footer>
 
-    <script>
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+        document.querySelectorAll('a[href^="#"]').forEach(a => {
+            a.addEventListener('click', function (e) {
                 e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
+                const t = document.querySelector(this.getAttribute('href'));
+                if (t) t.scrollIntoView({behavior: 'smooth', block: 'start'});
+            });
+        });
+
+        const o = new IntersectionObserver((e) => {
+            e.forEach(i => {
+                if (i.isIntersecting) {
+                    i.target.style.opacity = '1';
+                    i.target.style.transform = 'translateY(0)';
                 }
             });
+        }, {threshold: 0.1, rootMargin: '0px 0px -100px 0px'});
+
+        document.querySelectorAll('.portfolio-item, .art-item, .service-card, .cert-card').forEach((i, n) => {
+            i.style.opacity = '0';
+            i.style.transform = 'translateY(30px)';
+            i.style.transition = `all 0.6s ease ${n * 0.1}s`;
+            o.observe(i);
         });
 
-        // Add scroll-triggered animations
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -100px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                }
-            });
-        }, observerOptions);
-
-        // Observe portfolio items and gallery items
-        document.querySelectorAll('.portfolio-item, .art-item').forEach((item, index) => {
-            item.style.opacity = '0';
-            item.style.transform = 'translateY(30px)';
-            item.style.transition = `all 0.6s ease ${index * 0.1}s`;
-            observer.observe(item);
-        });
-
-        // Placeholder for buy button functionality
-        document.querySelectorAll('.btn-buy').forEach(button => {
-            button.addEventListener('click', function(e) {
-                e.preventDefault();
-                alert('Payment integration needed here. Options:\n\n1. Gumroad (easiest)\n2. Stripe Checkout\n3. PayPal\n4. Link to Etsy shop\n\nSee implementation guide for details.');
-            });
-        });
-    </script>
-</body>
-</html>
+        document.querySelectorAll('.
