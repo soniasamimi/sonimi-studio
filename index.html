@@ -75,15 +75,19 @@
         }
         
         nav .logo {
-            font-family: var(--font-display);
-            font-size: 1.1rem;
-            font-weight: 400;
-            color: var(--color-primary);
-            text-decoration: none;
-            text-transform: lowercase;
+            display: flex;
+            align-items: center;
         }
         
-        nav .logo span { font-weight: 700; }
+        nav .logo img {
+            height: 40px;
+            width: auto;
+            transition: opacity 0.3s ease;
+        }
+        
+        nav .logo img:hover {
+            opacity: 0.8;
+        }
         
         nav ul {
             display: flex;
@@ -164,6 +168,17 @@
             animation: slideUp 0.8s ease-out 0.2s backwards;
             letter-spacing: 4px;
             text-transform: uppercase;
+        }
+        
+        .hero-logo {
+            max-width: 280px;
+            margin-bottom: 1.5rem;
+            animation: slideUp 0.8s ease-out 0.15s backwards;
+        }
+        
+        .hero-logo img {
+            width: 100%;
+            height: auto;
         }
         
         .hero-content h2 {
@@ -723,7 +738,9 @@
 <body>
     <nav>
         <div class="container">
-            <a href="#" class="logo"><span>sonimi</span> Studio</a>
+            <a href="#" class="logo">
+                <img src="images/sonimi-logo.png" alt="Sonimi Studio">
+            </a>
             <ul>
                 <li><a href="#work">Work</a></li>
                 <li><a href="#services">Services</a></li>
@@ -738,6 +755,9 @@
     <section class="hero">
         <div class="container">
             <div class="hero-content">
+                <div class="hero-logo">
+                    <img src="images/sonimi-logo.png" alt="Sonimi Studio">
+                </div>
                 <h1>Sonia Samimi</h1>
                 <h2>Digital Content & Marketing</h2>
                 <p>Certified digital content specialist combining creative design, SEO strategy, and marketing automation. With 20 years of technical expertise and certifications from HubSpot, Google Analytics, and RMIT University, I help businesses grow through data-driven content and compelling visuals.</p>
