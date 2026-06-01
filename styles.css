@@ -896,7 +896,7 @@ h1 span{color:var(--sand); font-size: 40px;}
   .portrait-card{
     display:none !important;
   }
-  
+
   .hero-content{
       order:1;
   }
@@ -914,4 +914,37 @@ h1 span{color:var(--sand); font-size: 40px;}
         align-items:center;
     }
 
+}
+
+
+.floating-circle {
+    animation: floatSlow 20s ease-in-out infinite;
+}
+
+.floating-circle-2 {
+    animation: floatSlow2 25s ease-in-out infinite;
+}
+
+@keyframes floatSlow {
+    0% {
+        transform: translate(0px, 0px);
+    }
+    50% {
+        transform: translate(10px, -10px);
+    }
+    100% {
+        transform: translate(0px, 0px);
+    }
+}
+
+@keyframes floatSlow2 {
+    0% {
+        transform: translate(0px, 0px);
+    }
+    50% {
+        transform: translate(-12px, 8px);
+    }
+    100% {
+        transform: translate(0px, 0px);
+    }
 }

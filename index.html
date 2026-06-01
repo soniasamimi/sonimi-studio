@@ -38,9 +38,9 @@
 
   <main>
     <section id="home" class="hero section">
-      <div class="shape shape-left"></div>
-      <div class="shape shape-navy"></div>
-      <div class="shape shape-beige"></div>
+      <div class="shape shape-left floating-circle"></div>
+      <div class="shape shape-navy floating-circle"></div>
+      <div class="shape shape-beige floating-circle"></div>
 
       <div class="hero-content">
         <p class="eyebrow">SONIA SAMIMI</p>
@@ -316,17 +316,15 @@
 
         </div>
 
-        <form name="contact" method="POST" data-netlify="true" class="contact-form">
+        <form name="contact" method="POST" data-netlify="true" class="contact-form" action="/thank-you.html">
+          <input type="hidden" name="form-name" value="contact">
+
           <input type="text" name="name" placeholder="Your Name" required>
-
           <input type="email" name="email" placeholder="Email Address" required>
-
           <input type="text" name="business" placeholder="Business Name">
-
           <textarea name="message" placeholder="Tell me about your project..." rows="6" required></textarea>
 
           <button type="submit">Send Message</button>
-
         </form>
 
       </div>
@@ -358,7 +356,7 @@
           studio@sonimistudio.com.au
         </a>
 
-        <a href="https://linkedin.com/in/YOUR-LINKEDIN" target="_blank">
+        <a href="https://www.linkedin.com/in/sonia-samimi-bb554b28/" target="_blank" rel="noopener noreferrer">
           LinkedIn
         </a>
 
