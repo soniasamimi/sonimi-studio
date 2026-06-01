@@ -460,6 +460,40 @@ h1 span{color:var(--sand); font-size: 40px;}
   }
 }
 
+.about-stat {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.about-number {
+  font-size: clamp(4.5rem, 8vw, 7rem);
+  font-weight: 700;
+  line-height: 0.9;
+  color: #d8b782;
+  margin-bottom: 0.8rem;
+}
+
+.about-years {
+  font-size: 0.95rem;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: #d8b782;
+  margin-bottom: 1.6rem;
+}
+
+.about-tags {
+  font-size: 1.05rem;
+  color: rgba(255,255,255,0.92);
+  line-height: 1.8;
+}
+
+.about-tags {
+    font-size: 1.05rem;
+    color: rgba(255,255,255,0.9);
+    line-height: 1.8;
+}
+
 .about-section{
    width: 100%;
    position: relative;
@@ -467,7 +501,7 @@ h1 span{color:var(--sand); font-size: 40px;}
 }
 
 .about-panel{
-   width: 100%;
+  width: 100%;
   margin:0 auto;
   background:var(--navy);
   color:var(--white);

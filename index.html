@@ -238,8 +238,14 @@
       <div class="about-panel">
 
         <div class="about-stat">
-          <span>20+</span>
-          <p>Technology • Content • Strategy</p>
+          <div class="about-number">20+</div>
+          <div class="about-years">Years of Experience</div>
+
+          <div class="about-tags">
+            Software Development<br>
+            Digital Marketing<br>
+            Content Strategy
+          </div>
         </div>
 
         <div class="about-content">
@@ -316,51 +322,31 @@
           </div>
         </div>
 
-        <form
-      name="contact"
-      method="POST"
-      data-netlify="true"
-      netlify-honeypot="bot-field"
-      action="/thank-you.html"
-      class="contact-form">
+        <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thank-you.html"
+          class="contact-form">
 
-      <input type="hidden" name="form-name" value="contact">
+          <input type="hidden" name="form-name" value="contact">
 
-      <p hidden>
-        <label>
-          Don't fill this out:
-          <input name="bot-field">
-        </label>
-      </p>
+          <p hidden>
+            <label>
+              Don't fill this out:
+              <input name="bot-field">
+            </label>
+          </p>
 
-      <input
-        type="text"
-        name="name"
-        placeholder="Your Name"
-        required>
+          <input type="text" name="name" placeholder="Your Name" required>
 
-      <input
-        type="email"
-        name="email"
-        placeholder="Email Address"
-        required>
+          <input type="email" name="email" placeholder="Email Address" required>
 
-      <input
-        type="text"
-        name="business"
-        placeholder="Business Name">
+          <input type="text" name="business" placeholder="Business Name">
 
-      <textarea
-        name="message"
-        placeholder="Tell me about your project..."
-        rows="6"
-        required></textarea>
+          <textarea name="message" placeholder="Tell me about your project..." rows="6" required></textarea>
 
-      <button type="submit">
-        Send Message
-      </button>
+          <button type="submit">
+            Send Message
+          </button>
 
-    </form>
+        </form>
 
       </div>
 
