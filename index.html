@@ -1,1165 +1,384 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sonimi Studio | Digital Content Specialist | SEO & Marketing | Melbourne</title>
-    <meta name="description" content="Certified digital content specialist in Melbourne. HubSpot SEO, Google Analytics certified. Visual content creation, social media marketing, and marketing automation.">
-    
-    <style>
-        @font-face {
-            font-family: 'Aileron';
-            src: url('https://cdn.jsdelivr.net/gh/sursly/aileron@master/Aileron-Light.woff2') format('woff2');
-            font-weight: 300;
-            font-display: swap;
-        }
-        @font-face {
-            font-family: 'Aileron';
-            src: url('https://cdn.jsdelivr.net/gh/sursly/aileron@master/Aileron-Regular.woff2') format('woff2');
-            font-weight: 400;
-            font-display: swap;
-        }
-        @font-face {
-            font-family: 'Aileron';
-            src: url('https://cdn.jsdelivr.net/gh/sursly/aileron@master/Aileron-SemiBold.woff2') format('woff2');
-            font-weight: 600;
-            font-display: swap;
-        }
-        @font-face {
-            font-family: 'Aileron';
-            src: url('https://cdn.jsdelivr.net/gh/sursly/aileron@master/Aileron-Bold.woff2') format('woff2');
-            font-weight: 700;
-            font-display: swap;
-        }
-        
-        :root {
-            --color-primary: #1e2d47;
-            --color-accent: #c9af8e;
-            --color-secondary: #4a5568;
-            --color-light: #e8e4dd;
-            --color-white: #ffffff;
-            --color-gray: #8b8b8b;
-            --font-display: 'Aileron', sans-serif;
-            --font-body: 'Aileron', sans-serif;
-        }
-        
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        
-        body {
-            font-family: var(--font-body);
-            color: var(--color-primary);
-            background: var(--color-light);
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
-        
-        /* Navigation */
-        nav {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            z-index: 1000;
-            background: rgba(232, 228, 221, 0.98);
-            backdrop-filter: blur(10px);
-            padding: 1.5rem 3rem;
-            animation: slideDown 0.8s ease-out;
-        }
-        
-        nav .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
-        nav .logo {
-            display: flex;
-            align-items: center;
-        }
-        
-        nav .logo img {
-            height: 50px;
-            width: auto;
-            transition: opacity 0.3s ease;
-            object-fit: contain;
-        }
-        
-        nav .logo img:hover {
-            opacity: 0.8;
-        }
-        
-        /* Mobile menu button */
-        .mobile-menu-btn {
-            display: none;
-            flex-direction: column;
-            gap: 5px;
-            background: none;
-            border: none;
-            cursor: pointer;
-            padding: 5px;
-        }
-        
-        .mobile-menu-btn span {
-            width: 25px;
-            height: 3px;
-            background: var(--color-primary);
-            transition: all 0.3s ease;
-        }
-        
-        .mobile-menu-btn:hover span {
-            background: var(--color-accent);
-        }
-        
-        nav ul {
-            display: flex;
-            list-style: none;
-            gap: 2.5rem;
-        }
-        
-        nav a {
-            color: var(--color-primary);
-            text-decoration: none;
-            font-size: 0.85rem;
-            font-weight: 500;
-            letter-spacing: 1.5px;
-            text-transform: uppercase;
-            transition: color 0.3s ease;
-        }
-        
-        nav a:hover { color: var(--color-accent); }
-        
-        /* Hero Section - Clean Design */
-        .hero {
-            margin-top: 80px;
-            min-height: 85vh;
-            display: flex;
-            align-items: center;
-            padding: 4rem 3rem;
-            position: relative;
-            background: var(--color-light);
-            overflow: hidden;
-        }
-        
-        /* Subtle decorative elements */
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: -80px;
-            right: -80px;
-            width: 350px;
-            height: 350px;
-            background: var(--color-accent);
-            border-radius: 50%;
-            opacity: 0.2;
-            z-index: 0;
-        }
-        
-        .hero::after {
-            content: '';
-            position: absolute;
-            bottom: -100px;
-            left: -100px;
-            width: 400px;
-            height: 400px;
-            background: var(--color-primary);
-            border-radius: 50%;
-            opacity: 0.1;
-            z-index: 0;
-        }
-        
-        .hero .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            width: 100%;
-            display: grid;
-            grid-template-columns: 1fr 280px;
-            gap: 4rem;
-            align-items: center;
-            position: relative;
-            z-index: 1;
-        }
-        
-        .hero-content h1 {
-            font-family: var(--font-display);
-            font-size: 1.1rem;
-            font-weight: 300;
-            line-height: 1.2;
-            margin-bottom: 0.5rem;
-            color: var(--color-accent);
-            animation: slideUp 0.8s ease-out 0.2s backwards;
-            letter-spacing: 4px;
-            text-transform: uppercase;
-        }
-        
-        .hero-content h2 {
-            font-family: var(--font-display);
-            font-size: 3.2rem;
-            font-weight: 700;
-            line-height: 1.15;
-            margin-bottom: 1.5rem;
-            color: var(--color-primary);
-            animation: slideUp 0.8s ease-out 0.3s backwards;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-        
-        .hero-content p {
-            font-size: 1.05rem;
-            color: var(--color-gray);
-            margin-bottom: 2.5rem;
-            line-height: 1.8;
-            animation: slideUp 0.8s ease-out 0.4s backwards;
-            max-width: 600px;
-        }
-        
-        .hero-stats {
-            display: flex;
-            gap: 3rem;
-            margin-bottom: 2.5rem;
-            animation: slideUp 0.8s ease-out 0.6s backwards;
-        }
-        
-        .stat {
-            border-left: 3px solid var(--color-accent);
-            padding-left: 1.5rem;
-        }
-        
-        .stat-number {
-            font-family: var(--font-display);
-            font-size: 2.8rem;
-            font-weight: 700;
-            color: var(--color-primary);
-            display: block;
-            line-height: 1;
-        }
-        
-        .stat-label {
-            font-size: 0.7rem;
-            color: var(--color-gray);
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-            margin-top: 0.5rem;
-            font-weight: 400;
-        }
-        
-        .cta-buttons {
-            display: flex;
-            gap: 1.5rem;
-            animation: slideUp 0.8s ease-out 0.8s backwards;
-        }
-        
-        .btn {
-            padding: 1.1rem 2.5rem;
-            text-decoration: none;
-            font-weight: 600;
-            letter-spacing: 0.5px;
-            transition: all 0.3s ease;
-            cursor: pointer;
-            font-size: 0.85rem;
-            text-transform: uppercase;
-            border: none;
-        }
-        
-        .btn-primary {
-            background: var(--color-primary);
-            color: var(--color-white);
-        }
-        
-        .btn-primary:hover {
-            background: #2a3d5f;
-            transform: translateY(-2px);
-            box-shadow: 0 8px 20px rgba(30, 45, 71, 0.3);
-        }
-        
-        .btn-secondary {
-            background: transparent;
-            color: var(--color-primary);
-            border: 2px solid var(--color-primary);
-        }
-        
-        .btn-secondary:hover {
-            background: var(--color-primary);
-            color: var(--color-white);
-            transform: translateY(-2px);
-        }
-        
-        /* Hero Image - Clean circular photo */
-        .hero-image {
-            position: relative;
-            animation: fadeIn 1s ease-out 0.4s backwards;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        
-        .hero-image-wrapper {
-            width: 280px;
-            height: 280px;
-            border-radius: 50%;
-            overflow: hidden;
-            border: 6px solid var(--color-accent);
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
-            position: relative;
-        }
-        
-        .hero-image-wrapper::after {
-            content: '';
-            position: absolute;
-            top: -15px;
-            right: -15px;
-            width: calc(100% + 10px);
-            height: calc(100% + 10px);
-            border: 3px solid var(--color-primary);
-            border-radius: 50%;
-            z-index: -1;
-        }
-        
-        .hero-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-        
-        /* Section Styling */
-        section {
-            padding: 5rem 3rem;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        
-        .section-header {
-            text-align: center;
-            margin-bottom: 4rem;
-        }
-        
-        .section-tag {
-            font-size: 0.85rem;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            color: var(--color-accent);
-            font-weight: 600;
-            margin-bottom: 1rem;
-        }
-        
-        .section-title {
-            font-family: var(--font-display);
-            font-size: 2.8rem;
-            font-weight: 700;
-            color: var(--color-primary);
-            margin-bottom: 1.5rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-        
-        .section-subtitle {
-            font-size: 1.1rem;
-            color: var(--color-gray);
-            max-width: 700px;
-            margin: 0 auto;
-            line-height: 1.8;
-        }
-        
-        /* Portfolio Grid - 3 columns */
-        .portfolio-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 1.5rem;
-            margin-top: 3rem;
-        }
-        
-        .portfolio-item {
-            background: var(--color-white);
-            transition: transform 0.4s ease, box-shadow 0.4s ease;
-            cursor: pointer;
-        }
-        
-        .portfolio-item:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-        }
-        
-        .portfolio-image {
-            width: 100%;
-            aspect-ratio: 9/16;
-            background: linear-gradient(135deg, #d4cdc0 0%, #b8b0a3 100%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--color-gray);
-            font-size: 0.85rem;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .portfolio-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-        
-        .portfolio-info { padding: 1.5rem; }
-        
-        .portfolio-category {
-            font-size: 0.75rem;
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-            color: var(--color-accent);
-            font-weight: 700;
-            margin-bottom: 0.5rem;
-        }
-        
-        .portfolio-title {
-            font-family: var(--font-display);
-            font-size: 1.3rem;
-            font-weight: 700;
-            color: var(--color-primary);
-            margin-bottom: 0.5rem;
-        }
-        
-        .portfolio-description {
-            font-size: 0.95rem;
-            color: var(--color-gray);
-            line-height: 1.6;
-        }
-        
-        /* Services Section */
-        #services { background: var(--color-white); }
-        
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-        
-        .service-card {
-            background: var(--color-light);
-            padding: 2.5rem 2rem;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            border-top: 4px solid var(--color-accent);
-        }
-        
-        .service-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-        }
-        
-        .service-card h3 {
-            font-family: var(--font-display);
-            font-size: 1.3rem;
-            font-weight: 700;
-            color: var(--color-primary);
-            margin-bottom: 1.5rem;
-        }
-        
-        .service-card ul {
-            list-style: none;
-            padding: 0;
-        }
-        
-        .service-card li {
-            padding: 0.4rem 0 0.4rem 1.5rem;
-            position: relative;
-            color: var(--color-gray);
-            font-size: 0.95rem;
-        }
-        
-        .service-card li::before {
-            content: '✓';
-            position: absolute;
-            left: 0;
-            color: var(--color-accent);
-            font-weight: 700;
-        }
-        
-        /* Certifications Section */
-        #certifications { background: var(--color-light); }
-        
-        .certifications-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-        
-        .cert-card {
-            background: var(--color-white);
-            padding: 2rem 1.5rem;
-            text-align: center;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            border-radius: 8px;
-        }
-        
-        .cert-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-        }
-        
-        .cert-icon {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-        }
-        
-        .cert-card h3 {
-            font-family: var(--font-display);
-            font-size: 1.2rem;
-            font-weight: 700;
-            color: var(--color-primary);
-            margin-bottom: 0.5rem;
-        }
-        
-        .cert-issuer {
-            color: var(--color-accent);
-            font-weight: 700;
-            margin-bottom: 0.5rem;
-            font-size: 0.9rem;
-        }
-        
-        .cert-date {
-            color: var(--color-gray);
-            font-size: 0.8rem;
-        }
-        
-        /* Art Gallery */
-        #art-gallery { background: var(--color-white); }
-        
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 2.5rem;
-            margin-top: 3rem;
-        }
-        
-        .art-item {
-            background: var(--color-light);
-            transition: transform 0.3s ease;
-        }
-        
-        .art-item:hover { transform: scale(1.02); }
-        
-        .art-image {
-            width: 100%;
-            aspect-ratio: 3/4;
-            background: linear-gradient(135deg, #c9af8e 0%, #a89576 100%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--color-white);
-            position: relative;
-            overflow: hidden;
-            font-size: 0.85rem;
-        }
-        
-        .available-badge {
-            position: absolute;
-            top: 15px;
-            right: 15px;
-            background: var(--color-secondary);
-            color: var(--color-white);
-            padding: 0.4rem 0.8rem;
-            font-size: 0.7rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            font-weight: 700;
-        }
-        
-        .art-info { padding: 1.5rem; }
-        
-        .art-title {
-            font-family: var(--font-display);
-            font-size: 1.2rem;
-            font-weight: 700;
-            color: var(--color-primary);
-            margin-bottom: 0.5rem;
-        }
-        
-        .art-details {
-            font-size: 0.85rem;
-            color: var(--color-gray);
-            margin-bottom: 1rem;
-        }
-        
-        .art-price {
-            font-size: 1.4rem;
-            font-weight: 700;
-            color: var(--color-secondary);
-            margin-bottom: 1rem;
-        }
-        
-        .btn-buy {
-            width: 100%;
-            text-align: center;
-            background: var(--color-accent);
-            color: var(--color-white);
-            padding: 1rem;
-            font-size: 0.85rem;
-        }
-        
-        .btn-buy:hover {
-            background: #b89d7e;
-            transform: translateY(-2px);
-        }
-        
-        /* About Section */
-        #about {
-            background: var(--color-primary);
-            color: var(--color-white);
-        }
-        
-        #about .section-tag { color: var(--color-accent); }
-        #about .section-title { color: var(--color-white); }
-        #about .section-subtitle { color: rgba(255, 255, 255, 0.8); }
-        
-        .about-content {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 3rem;
-            margin-top: 3rem;
-        }
-        
-        .about-text p {
-            font-size: 1.05rem;
-            line-height: 1.9;
-            margin-bottom: 1.5rem;
-            color: rgba(255, 255, 255, 0.9);
-        }
-        
-        .skills-list {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1rem;
-            margin-top: 2rem;
-        }
-        
-        .skill-item {
-            background: rgba(255, 255, 255, 0.05);
-            padding: 1.2rem;
-            border-left: 3px solid var(--color-accent);
-        }
-        
-        .skill-item strong {
-            display: block;
-            color: var(--color-accent);
-            margin-bottom: 0.5rem;
-            font-size: 0.85rem;
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-            font-weight: 700;
-        }
-        
-        /* Contact Section */
-        #contact {
-            background: var(--color-secondary);
-            color: var(--color-white);
-            text-align: center;
-        }
-        
-        #contact .section-tag { color: var(--color-accent); }
-        #contact .section-title { color: var(--color-white); }
-        #contact .section-subtitle { color: rgba(255, 255, 255, 0.9); }
-        
-        .contact-methods {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            margin-top: 3rem;
-            flex-wrap: wrap;
-        }
-        
-        .contact-method {
-            background: rgba(255, 255, 255, 0.1);
-            padding: 2rem 2.5rem;
-            min-width: 220px;
-            transition: background 0.3s ease;
-        }
-        
-        .contact-method:hover { background: rgba(255, 255, 255, 0.15); }
-        
-        .contact-method h3 {
-            font-family: var(--font-display);
-            font-size: 1.3rem;
-            margin-bottom: 1rem;
-            color: var(--color-accent);
-            font-weight: 700;
-        }
-        
-        .contact-method a {
-            color: var(--color-white);
-            text-decoration: none;
-            font-size: 1rem;
-            transition: color 0.3s ease;
-        }
-        
-        .contact-method a:hover { color: var(--color-accent); }
-        
-        /* Footer */
-        footer {
-            background: var(--color-primary);
-            color: rgba(255, 255, 255, 0.7);
-            text-align: center;
-            padding: 2rem;
-            font-size: 0.85rem;
-        }
-        
-        /* Animations */
-        @keyframes slideDown {
-            from { transform: translateY(-100%); opacity: 0; }
-            to { transform: translateY(0); opacity: 1; }
-        }
-        
-        @keyframes slideUp {
-            from { transform: translateY(40px); opacity: 0; }
-            to { transform: translateY(0); opacity: 1; }
-        }
-        
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-        
-        /* Responsive */
-        @media (max-width: 968px) {
-            nav { padding: 1.2rem 2rem; }
-            nav ul { gap: 2rem; font-size: 0.8rem; }
-            .hero { margin-top: 70px; padding: 3rem 2rem; }
-            .hero .container { grid-template-columns: 1fr; gap: 3rem; }
-            .hero-image { order: -1; justify-content: center; }
-            .hero-image-wrapper { width: 250px; height: 250px; }
-            .hero-content h2 { font-size: 2.5rem; }
-            .section-title { font-size: 2.2rem; }
-            .portfolio-grid { grid-template-columns: repeat(2, 1fr); }
-            .services-grid { grid-template-columns: 1fr; }
-        }
-        
-        @media (max-width: 640px) {
-            nav { padding: 1rem 1.5rem; }
-            nav .logo img { height: 40px; }
-            
-            /* Mobile menu */
-            .mobile-menu-btn { display: flex; }
-            nav ul { 
-                display: none;
-                position: absolute;
-                top: 62px;
-                left: 0;
-                right: 0;
-                background: var(--color-light);
-                flex-direction: column;
-                gap: 0;
-                padding: 1rem 0;
-                box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-                z-index: 999;
-            }
-            
-            nav ul.active { display: flex; }
-            
-            nav ul li { 
-                padding: 1rem 2rem;
-                border-bottom: 1px solid rgba(0,0,0,0.05);
-            }
-            
-            nav ul li:last-child { border-bottom: none; }
-            
-            .hero { padding: 2rem 1.5rem; margin-top: 70px; }
-            .hero .container { gap: 2rem; }
-            .hero-image { order: -1; justify-content: center; }
-            .hero-image-wrapper { 
-                width: 220px; 
-                height: 220px;
-                margin: 0 auto;
-            }
-            .hero-image-wrapper::after {
-                display: none;
-            }
-            .hero-content h1 { font-size: 0.95rem; }
-            .hero-content h2 { font-size: 1.8rem; }
-            .hero-content p { font-size: 0.95rem; }
-            .hero-stats { flex-direction: column; gap: 1.5rem; }
-            .cta-buttons { flex-direction: column; }
-            section { padding: 4rem 1.5rem; }
-            .section-title { font-size: 1.8rem; }
-            .portfolio-grid { grid-template-columns: 1fr; }
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SONIMI Studio | Content, Websites & Strategy</title>
+  <meta name="description"
+    content="SONIMI Studio helps growing brands with digital content, websites, SEO and creative strategy." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
 </head>
+
 <body>
-    <nav>
-        <div class="container">
-            <a href="#" class="logo">
-                <img src="images/sonimi-logo.png" alt="Sonimi Studio">
-            </a>
-            <button class="mobile-menu-btn" aria-label="Toggle menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-            <ul>
-                <li><a href="#work">Work</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#certifications">Certifications</a></li>
-                <li><a href="#art-gallery">Art</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </div>
+  <header class="site-header">
+    <a href="#home" class="brand">
+      <img src="./images/sonimi-logo.png" alt="SONIMI Studio Logo">
+    </a>
+
+    <button class="menu-toggle" aria-label="Open menu">☰</button>
+
+    <nav class="nav">
+      <a href="#home">Home</a>
+      <a href="#work">Work</a>
+      <a href="#services">Services</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
     </nav>
+  </header>
 
-    <section class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <h1>Sonia Samimi</h1>
-                <h2>Digital Content & Marketing</h2>
-                <p>Certified digital content specialist combining creative design, SEO strategy, and marketing automation. With 20 years of technical expertise and certifications from HubSpot, Google Analytics, and RMIT University, I help businesses grow through data-driven content and compelling visuals.</p>
-                
-                <div class="hero-stats">
-                    <div class="stat">
-                        <span class="stat-number">20+</span>
-                        <span class="stat-label">Years in Tech</span>
-                    </div>
-                    <div class="stat">
-                        <span class="stat-number">200+</span>
-                        <span class="stat-label">Original Paintings</span>
-                    </div>
-                    <div class="stat">
-                        <span class="stat-number">4</span>
-                        <span class="stat-label">Certifications</span>
-                    </div>
-                </div>
-                
-                <div class="cta-buttons">
-                    <a href="#work" class="btn btn-primary">View My Work</a>
-                    <a href="#contact" class="btn btn-secondary">Get In Touch</a>
-                </div>
-            </div>
-            
-            <div class="hero-image">
-                <div class="hero-image-wrapper">
-                    <img src="images/sonia_samimi.png" alt="Sonia Samimi">
-                </div>
-            </div>
+  <main>
+    <section id="home" class="hero section">
+      <div class="shape shape-left"></div>
+      <div class="shape shape-navy"></div>
+      <div class="shape shape-beige"></div>
+
+      <div class="hero-content">
+        <p class="eyebrow">SONIA SAMIMI</p>
+        <h1>Content, Websites & Strategy<br><span>for Growing Brands</span></h1>
+        <p class="hero-copy">
+          I help businesses strengthen their digital presence through strategic content,
+          websites, SEO, and creative systems designed for sustainable growth.
+          With a background in software development and digital marketing, I combine
+          technical thinking with creative execution to build clear, effective online experiences.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#work">Explore Projects</a>
+          <a class="btn btn-secondary" href="#contact">Start a Conversation</a>
         </div>
+        <p class="trust-line">Supporting local businesses, hospitality brands and community organisations across
+          Melbourne.</p>
+      </div>
+
+      <div class="portrait-card" aria-label="Portrait placeholder">
+        <div class="portrait-inner">
+          <span></span>
+        </div>
+      </div>
     </section>
 
-    <section id="work">
-        <div class="section-header">
-            <div class="section-tag">Portfolio</div>
-            <h2 class="section-title">Digital Content Work</h2>
-            <p class="section-subtitle">Social media graphics, video editing, and content creation using Canva, CapCut, and creative storytelling.</p>
-        </div>
-        
-        <div class="portfolio-grid">
-            <div class="portfolio-item">
-                <div class="portfolio-image">[Instagram Post]</div>
-                <div class="portfolio-info">
-                    <div class="portfolio-category">Social Media Design</div>
-                    <h3 class="portfolio-title">Instagram & Facebook Graphics</h3>
-                    <p class="portfolio-description">Eye-catching social media posts designed in Canva for clients and personal branding.</p>
-                </div>
-            </div>
-            
-            <div class="portfolio-item">
-                <div class="portfolio-image">[Painting Timelapse]</div>
-                <div class="portfolio-info">
-                    <div class="portfolio-category">Video Content</div>
-                    <h3 class="portfolio-title">Painting Timelapse Videos</h3>
-                    <p class="portfolio-description">Mesmerizing timelapse videos showcasing the creative process on YouTube.</p>
-                </div>
-            </div>
-            
-            <div class="portfolio-item">
-                <div class="portfolio-image">[Video Editing]</div>
-                <div class="portfolio-info">
-                    <div class="portfolio-category">Video Editing</div>
-                    <h3 class="portfolio-title">CapCut Video Production</h3>
-                    <p class="portfolio-description">Dynamic short-form videos edited for Instagram Reels and Facebook Stories.</p>
-                </div>
-            </div>
-            
-            <div class="portfolio-item">
-                <div class="portfolio-image">[YouTube Channel]</div>
-                <div class="portfolio-info">
-                    <div class="portfolio-category">Content Creation</div>
-                    <h3 class="portfolio-title">Sonimi Studio YouTube</h3>
-                    <p class="portfolio-description">Art-focused channel featuring tutorials, timelapses, and creative process videos.</p>
-                </div>
-            </div>
-            
-            <div class="portfolio-item">
-                <div class="portfolio-image">[Instagram Story]</div>
-                <div class="portfolio-info">
-                    <div class="portfolio-category">Story Design</div>
-                    <h3 class="portfolio-title">Instagram Stories & Reels</h3>
-                    <p class="portfolio-description">Engaging story graphics and short video content designed in Canva.</p>
-                </div>
-            </div>
-            
-            <div class="portfolio-item">
-                <div class="portfolio-image">[n8n Workflow]</div>
-                <div class="portfolio-info">
-                    <div class="portfolio-category">Marketing Automation</div>
-                    <h3 class="portfolio-title">AI-Powered Workflows</h3>
-                    <p class="portfolio-description">Automated content distribution and social scheduling using n8n and AI agents.</p>
-                </div>
-            </div>
-        </div>
+    <!-- Portfolio Section -->
+    <section id="work" class="portfolio-section">
+
+      <div class="portfolio-header">
+        <span class="portfolio-label">PORTFOLIO</span>
+        <h2>Selected Digital Work</h2>
+      </div>
+
+      <div class="portfolio-grid">
+
+        <!-- Unity Aid -->
+        <article class="portfolio-card">
+
+          <div class="portfolio-image">
+            <img src="./images/portfolio/unity-aid-project.jpg" alt="Unity Aid">
+          </div>
+
+          <div class="portfolio-content">
+
+            <span class="portfolio-category">
+              COMMUNITY & NDIS
+            </span>
+
+            <h3>Unity Aid</h3>
+
+            <div class="card-line"></div>
+
+            <p>
+              Content creation and campaign support for a local
+              NDIS provider, building awareness and stronger
+              community connection.
+            </p>
+
+            <a href="unity-aid.html" class="portfolio-link">
+              View Project
+              <span>→</span>
+            </a>
+
+          </div>
+
+        </article>
+
+        <!-- Hafez -->
+
+        <article class="portfolio-card">
+
+          <div class="portfolio-image">
+            <img src="./images/portfolio/hafez-project.jpg" alt="Hafez Persian Restaurant">
+          </div>
+
+          <div class="portfolio-content">
+
+            <span class="portfolio-category">
+              HOSPITALITY CONTENT
+            </span>
+
+            <h3>Hafez Persian Restaurant</h3>
+
+            <div class="card-line"></div>
+
+            <p>
+              Social media content and storytelling that showcase
+              authentic Persian cuisine and warm hospitality.
+            </p>
+
+            <a href="hafez.html" class="portfolio-link">
+              View Project
+              <span>→</span>
+            </a>
+
+          </div>
+
+        </article>
+
+        <!-- Roselane -->
+
+        <article class="portfolio-card">
+
+          <div class="portfolio-image">
+            <img src="./images/portfolio/roselane-project.jpg" alt="Roselane Bakery">
+          </div>
+
+          <div class="portfolio-content">
+
+            <span class="portfolio-category">
+              LOCAL BUSINESS MARKETING
+            </span>
+
+            <h3>Roselane Bakery</h3>
+
+            <div class="card-line"></div>
+
+            <p>
+              Product photography, seasonal campaigns and community
+              event promotion that bring the bakery's story to life.
+            </p>
+
+            <a href="roselane.html" class="portfolio-link">
+              View Project
+              <span>→</span>
+            </a>
+
+          </div>
+
+        </article>
+
+      </div>
+
     </section>
 
-    <section id="services">
-        <div class="section-header">
-            <div class="section-tag">What I Offer</div>
-            <h2 class="section-title">Services & Solutions</h2>
-            <p class="section-subtitle">Comprehensive digital content and marketing services backed by professional certifications.</p>
-        </div>
-        
-        <div class="services-grid">
-            <div class="service-card">
-                <h3>🎨 Visual Content Creation</h3>
-                <ul>
-                    <li>Social media graphics & templates</li>
-                    <li>Video editing & motion graphics</li>
-                    <li>Brand design & visual identity</li>
-                    <li>Instagram/Facebook content</li>
-                    <li>YouTube thumbnail design</li>
-                </ul>
-            </div>
-            
-            <div class="service-card">
-                <h3>🔍 SEO & Content Strategy</h3>
-                <ul>
-                    <li>SEO audit & optimization</li>
-                    <li>Keyword research & planning</li>
-                    <li>Content marketing strategy</li>
-                    <li>Google Analytics setup</li>
-                    <li>Performance reporting</li>
-                </ul>
-            </div>
-            
-            <div class="service-card">
-                <h3>📱 Social Media Marketing</h3>
-                <ul>
-                    <li>Social media strategy</li>
-                    <li>Content calendar development</li>
-                    <li>Platform optimization</li>
-                    <li>Analytics & tracking</li>
-                    <li>Community management</li>
-                </ul>
-            </div>
-            
-            <div class="service-card">
-                <h3>🤖 Marketing Automation</h3>
-                <ul>
-                    <li>Workflow automation (n8n)</li>
-                    <li>AI-powered content workflows</li>
-                    <li>Multi-platform distribution</li>
-                    <li>Process optimization</li>
-                    <li>HubSpot integration</li>
-                </ul>
-            </div>
-        </div>
+    <section id="services" class="section services-section">
+      <div class="services-bg-circle"></div>
+      <div class="section-heading narrow">
+        <p class="eyebrow">SERVICES</p>
+        <h2>Digital support for brands that need clarity, content and structure.</h2>
+      </div>
+
+      <div class="services-grid">
+
+        <article class="service-card">
+          <span class="service-number">01</span>
+          <h3>Content & Social Media Management</h3>
+          <p>
+            Strategic social media content for small businesses, including reels,
+            captions, content calendars, campaign ideas and visual storytelling.
+          </p>
+          <ul>
+            <li>Instagram & Facebook content</li>
+            <li>Short-form video editing</li>
+            <li>Captions & content planning</li>
+            <li>Campaign visuals</li>
+          </ul>
+        </article>
+
+        <article class="service-card">
+          <span class="service-number">02</span>
+          <h3>Websites & SEO</h3>
+          <p>
+            Clean, practical website support for businesses that need a stronger
+            online presence and a better user experience.
+          </p>
+          <ul>
+            <li>Wix & WordPress websites</li>
+            <li>Landing pages</li>
+            <li>Website updates</li>
+            <li>Local SEO foundations</li>
+          </ul>
+        </article>
+
+        <article class="service-card">
+          <span class="service-number">03</span>
+          <h3>Strategy & Digital Systems</h3>
+          <p>
+            Practical digital strategy and systems support to help businesses stay
+            organised, consistent and focused on growth.
+          </p>
+          <ul>
+            <li>Marketing workflows</li>
+            <li>Analytics & reporting</li>
+            <li>Content systems</li>
+            <li>AI-assisted creative workflows</li>
+          </ul>
+        </article>
+
+      </div>
     </section>
 
-    <section id="certifications">
-        <div class="section-header">
-            <div class="section-tag">Credentials</div>
-            <h2 class="section-title">Certifications & Training</h2>
-            <p class="section-subtitle">Professionally certified in digital marketing, SEO, analytics, and content strategy.</p>
-        </div>
-        
-        <div class="certifications-grid">
-            <div class="cert-card">
-                <div class="cert-icon">📊</div>
-                <h3>Google Analytics Certification</h3>
-                <p class="cert-issuer">Skillshop</p>
-                <p class="cert-date">Issued Feb 2026 · Expires Feb 2027</p>
-            </div>
-            
-            <div class="cert-card">
-                <div class="cert-icon">🔍</div>
-                <h3>SEO Certification</h3>
-                <p class="cert-issuer">HubSpot Academy</p>
-                <p class="cert-date">Issued Jan 2026 · Expires Feb 2027</p>
-            </div>
-            
-            <div class="cert-card">
-                <div class="cert-icon">📱</div>
-                <h3>Content & Social Media Marketing</h3>
-                <p class="cert-issuer">RMIT University</p>
-                <p class="cert-date">Issued Sep 2025</p>
-            </div>
-            
-            <div class="cert-card">
-                <div class="cert-icon">✍️</div>
-                <h3>Content Marketing</h3>
-                <p class="cert-issuer">HubSpot Academy</p>
-                <p class="cert-date">Issued Jan 2026 · Expires Feb 2028</p>
-            </div>
-        </div>
-    </section>
+    <section id="about" class="section about-section">
 
-    <section id="art-gallery">
-        <div class="section-header">
-            <div class="section-tag">Original Art</div>
-            <h2 class="section-title">Paintings Collection</h2>
-            <p class="section-subtitle">Over 200 original watercolor and acrylic paintings available for purchase. Each piece is one-of-a-kind.</p>
-        </div>
-        
-        <div class="gallery-grid">
-            <div class="art-item">
-                <div class="art-image">
-                    <span class="available-badge">Available</span>
-                    [Painting 1]
-                </div>
-                <div class="art-info">
-                    <h3 class="art-title">Sunset Reflections</h3>
-                    <p class="art-details">Watercolor on paper • 16" x 20"</p>
-                    <p class="art-price">$85</p>
-                    <a href="#" class="btn btn-buy">Purchase</a>
-                </div>
-            </div>
-            
-            <div class="art-item">
-                <div class="art-image">
-                    <span class="available-badge">Available</span>
-                    [Painting 2]
-                </div>
-                <div class="art-info">
-                    <h3 class="art-title">Urban Dreams</h3>
-                    <p class="art-details">Acrylic on canvas • 24" x 30"</p>
-                    <p class="art-price">$145</p>
-                    <a href="#" class="btn btn-buy">Purchase</a>
-                </div>
-            </div>
-            
-            <div class="art-item">
-                <div class="art-image">
-                    <span class="available-badge">Available</span>
-                    [Painting 3]
-                </div>
-                <div class="art-info">
-                    <h3 class="art-title">Garden Whispers</h3>
-                    <p class="art-details">Watercolor on paper • 12" x 16"</p>
-                    <p class="art-price">$65</p>
-                    <a href="#" class="btn btn-buy">Purchase</a>
-                </div>
-            </div>
-        </div>
-    </section>
+      <div class="about-panel">
 
-    <section id="about">
-        <div class="section-header">
-            <div class="section-tag">About Me</div>
-            <h2 class="section-title">Where Tech Meets Creativity</h2>
-            <p class="section-subtitle">Two decades of software development taught me precision. A lifetime of creating taught me vision. Professional certifications guide my strategy.</p>
+        <div class="about-stat">
+          <span>20+</span>
+          <p>Technology • Content • Strategy</p>
         </div>
-        
+
         <div class="about-content">
-            <div class="about-text">
-                <p>I spent 20 years building software solutions before transitioning to digital content creation and marketing. That technical foundation gives me a unique advantage: I understand both the creative and analytical sides of digital marketing.</p>
-                
-                <p>As a certified professional with credentials from HubSpot, Google Analytics, and RMIT University, I work with startups, healthcare organizations, and small businesses in Melbourne to create content that not only looks beautiful but performs. Whether it's an SEO-optimized campaign, social media content, or marketing automation workflow, I approach every project with attention to detail and measurable results.</p>
-                
-                <div class="skills-list">
-                    <div class="skill-item">
-                        <strong>Visual Content</strong>
-                        Social media graphics (Canva), video editing (CapCut), motion graphics, brand design
-                    </div>
-                    
-                    <div class="skill-item">
-                        <strong>SEO & Analytics</strong>
-                        Google Analytics certified, HubSpot SEO, keyword research, performance tracking
-                    </div>
-                    
-                    <div class="skill-item">
-                        <strong>Content Marketing</strong>
-                        RMIT certified, social media strategy, content planning, campaign development
-                    </div>
-                    
-                    <div class="skill-item">
-                        <strong>Technical & Automation</strong>
-                        HTML/CSS/JS, WordPress, n8n workflows, AI agents, 20 years development
-                    </div>
-                </div>
-            </div>
+
+          <p class="eyebrow">ABOUT</p>
+
+          <h2>
+            Technology. Creativity.<br>
+            Practical Strategy.
+          </h2>
+
+          <p>
+            For more than 20 years I’ve worked across software development,
+            digital systems and online experiences.
+          </p>
+
+          <p>
+            Today I help businesses strengthen their digital presence through
+            content, websites and practical marketing systems that support
+            sustainable growth.
+          </p>
+
+          <p>
+            My approach combines technical thinking with creative execution,
+            helping businesses build clearer online experiences, stronger content
+            and more effective digital foundations.
+          </p>
+
         </div>
+
+      </div>
+
     </section>
 
-    <section id="contact">
-        <div class="section-header">
-            <div class="section-tag">Let's Work Together</div>
-            <h2 class="section-title">Get In Touch</h2>
-            <p class="section-subtitle">Available for digital content creation, SEO consulting, marketing automation, full-time opportunities, and art commissions.</p>
-        </div>
-        
-        <div class="contact-methods">
-            <div class="contact-method">
-                <h3>Email</h3>
-                <a href="/cdn-cgi/l/email-protection#acdfc3c2c5cd82dfcdc1c5c1c5eccbc1cdc5c082cfc3c1"><span class="__cf_email__" data-cfemail="f1829e9f9890df82909c989c98b1969c90989ddf929e9c">[email&#160;protected]</span></a>
-            </div>
-            
-            <div class="contact-method">
-                <h3>YouTube</h3>
-                <a href="https://www.youtube.com/@sonimi-studio" target="_blank">Sonimi Studio</a>
+    <section id="contact" class="contact-section">
+
+      <div class="contact-wrapper">
+
+        <div class="contact-intro">
+
+          <p class="eyebrow">CONTACT</p>
+
+          <h2>
+            Let's Start a Conversation
+          </h2>
+
+          <p>
+            Whether you need support with content creation, website improvements, SEO or digital strategy, I'd love to
+            learn more about your business and explore how I can help.
+          </p>
+
+          <div class="contact-details">
+
+            <div>
+              <span>Email</span>
+              <a href="mailto:studio@sonimistudio.com.au">
+                studio@sonimistudio.com.au
+              </a>
             </div>
 
-            <div class="contact-method">
-                <h3>LinkedIn</h3>
-                <a href="https://www.linkedin.com/in/sonia-samimi-bb554b28/" target="_blank">Connect</a>
+            <div>
+              <span>Location</span>
+              <p>Melbourne, Australia</p>
             </div>
-            
-            <div class="contact-method">
-                <h3>Instagram</h3>
-                <a href="https://www.instagram.com/sonia.samimi/" target="_blank">@sonia.samimi</a>
+
+            <div>
+              <span>LinkedIn</span>
+              <a href="#">
+                Connect on LinkedIn
+              </a>
             </div>
+            <div class="response-time">Usually responds within 2 business days</div>
+
+
+          </div>
+
         </div>
+
+        <form name="contact" method="POST" data-netlify="true" class="contact-form">
+          <input type="text" name="name" placeholder="Your Name" required>
+
+          <input type="email" name="email" placeholder="Email Address" required>
+
+          <input type="text" name="business" placeholder="Business Name">
+
+          <textarea name="message" placeholder="Tell me about your project..." rows="6" required></textarea>
+
+          <button type="submit">Send Message</button>
+
+          <button type="submit">
+            Send Message
+          </button>
+
+        </form>
+
+      </div>
+
     </section>
+  </main>
 
-    <footer>
-        <p>&copy; 2025 Sonimi Studio • Digital Content Specialist • Melbourne, Australia</p>
-    </footer>
+  <footer class="site-footer">
 
-    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-        // Mobile menu toggle
-        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
-        const navMenu = document.querySelector('nav ul');
-        
-        if (mobileMenuBtn) {
-            mobileMenuBtn.addEventListener('click', () => {
-                navMenu.classList.toggle('active');
-            });
-            
-            // Close menu when clicking a link
-            document.querySelectorAll('nav ul a').forEach(link => {
-                link.addEventListener('click', () => {
-                    navMenu.classList.remove('active');
-                });
-            });
-        }
-        
-        // Smooth scrolling
-        document.querySelectorAll('a[href^="#"]').forEach(a => {
-            a.addEventListener('click', function (e) {
-                e.preventDefault();
-                const t = document.querySelector(this.getAttribute('href'));
-                if (t) t.scrollIntoView({behavior: 'smooth', block: 'start'});
-            });
-        });
+    <div class="footer-container">
 
-        const o = new IntersectionObserver((e) => {
-            e.forEach(i => {
-                if (i.isIntersecting) {
-                    i.target.style.opacity = '1';
-                    i.target.style.transform = 'translateY(0)';
-                }
-            });
-        }, {threshold: 0.1, rootMargin: '0px 0px -100px 0px'});
+      <div class="footer-brand">
 
-        document.querySelectorAll('.portfolio-item, .art-item, .service-card, .cert-card').forEach((i, n) => {
-            i.style.opacity = '0';
-            i.style.transform = 'translateY(30px)';
-            i.style.transition = `all 0.6s ease ${n * 0.1}s`;
-            o.observe(i);
-        });
+        <img src="./images/sonimi-logo.png" alt="Sonimi Studio" class="footer-logo">
 
-        document.querySelectorAll('.
+        <p class="footer-tagline">
+          Content • Websites • Strategy
+        </p>
+
+        <p class="footer-location">
+          Melbourne, Australia
+        </p>
+
+      </div>
+
+      <div class="footer-contact">
+
+        <a href="mailto:studio@sonimistudio.com.au">
+          studio@sonimistudio.com.au
+        </a>
+
+        <a href="https://linkedin.com/in/YOUR-LINKEDIN" target="_blank">
+          LinkedIn
+        </a>
+
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+
+      <p>
+        © 2026 Sonimi Studio. All rights reserved.
+      </p>
+
+    </div>
+
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
