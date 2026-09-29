@@ -246,10 +246,19 @@ h1 span{color:var(--sand); font-size: 40px;}
 }
 
 .portfolio-header h2{
-    font-size:clamp(2.8rem,6vw,5rem);
+    font-size:clamp(2.4rem,5vw,4.6rem);
     color:var(--navy);
-    margin:0;
+    margin:0 auto;
     line-height:1.05;
+    max-width:920px;
+}
+
+.portfolio-intro{
+    max-width:760px;
+    margin:24px auto 0;
+    color:#5f6877;
+    font-size:17px;
+    line-height:1.8;
 }
 
 .portfolio-grid{
@@ -317,7 +326,28 @@ h1 span{color:var(--sand); font-size: 40px;}
 .portfolio-content p{
     color:#5f6470;
     line-height:1.8;
-    margin-bottom:32px;
+    margin-bottom:22px;
+}
+
+.portfolio-tags{
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px;
+    margin-bottom:28px;
+}
+
+.portfolio-tags span{
+    padding:7px 11px;
+    border:1px solid rgba(31,45,73,.10);
+    background:rgba(255,255,255,.55);
+    color:#667085;
+    font-size:11px;
+    letter-spacing:.5px;
+    text-transform:uppercase;
+}
+
+.portfolio-card-featured{
+    border-top:3px solid var(--sand);
 }
 
 .portfolio-link{
@@ -600,6 +630,9 @@ h1 span{color:var(--sand); font-size: 40px;}
 }
 
 @media(max-width:560px){
+  .portfolio-grid{grid-template-columns:1fr;padding:0 20px}
+  .portfolio-header{padding:0 20px;margin-bottom:42px}
+  .portfolio-image{height:280px}
   .about-section{
     padding:80px 24px;
   }
@@ -884,7 +917,8 @@ h1 span{color:var(--sand); font-size: 40px;}
   .section{padding-left:24px;padding-right:24px}
   .footer{flex-direction:column;gap:8px}
   .portfolio-grid{
-        grid-template-columns:1fr;
+        grid-template-columns:repeat(2,1fr);
+        padding:0 24px;
     }
 
     .portfolio-image{

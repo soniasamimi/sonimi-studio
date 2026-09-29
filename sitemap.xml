@@ -20,4 +20,8 @@
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
+
+  <url><loc>https://sonimistudio.com.au/brushline.html</loc></url>
+  <url><loc>https://sonimistudio.com.au/golden-pencil.html</loc></url>
+  <url><loc>https://sonimistudio.com.au/lincoln-dental.html</loc></url>
 </urlset>

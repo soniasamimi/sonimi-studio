@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900">
+<rect width="1200" height="900" fill="#f5f3ef"/>
+<circle cx="1050" cy="120" r="230" fill="#ded9cf" opacity=".65"/>
+<circle cx="80" cy="820" r="190" fill="#c7ad86" opacity=".18"/>
+<path d="M870 0 A330 330 0 0 0 1200 330" fill="none" stroke="#c7ad86" stroke-width="3" opacity=".7"/>
+<text x="90" y="110" font-family="Arial,sans-serif" font-size="22" letter-spacing="7" fill="#c7ad86">SONIMI STUDIO · SELECTED WORK</text>
+<text x="90" y="390" font-family="Arial,sans-serif" font-size="82" font-weight="700" fill="#1f2d49">BRUSHLINE</text>
+<text x="90" y="480" font-family="Arial,sans-serif" font-size="82" font-weight="700" fill="#1f2d49">PAINTING</text>
+<line x1="90" y1="535" x2="230" y2="535" stroke="#c7ad86" stroke-width="6"/>
+<text x="90" y="610" font-family="Arial,sans-serif" font-size="30" fill="#5f6877">Website  •  Local Search</text>
+<text x="90" y="790" font-family="Arial,sans-serif" font-size="18" letter-spacing="3" fill="#7b8190">Website / Google Business / SEO</text>
+</svg>
