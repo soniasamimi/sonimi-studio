@@ -2,26 +2,30 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://sonimistudio.com.au/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>1.0</priority>
+    <lastmod>2026-09-29</lastmod>
   </url>
   <url>
     <loc>https://sonimistudio.com.au/unity-aid.html</loc>
-    <changefreq>yearly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-09-29</lastmod>
   </url>
   <url>
     <loc>https://sonimistudio.com.au/hafez.html</loc>
-    <changefreq>yearly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-09-29</lastmod>
   </url>
   <url>
     <loc>https://sonimistudio.com.au/roselane.html</loc>
-    <changefreq>yearly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-09-29</lastmod>
   </url>
-
-  <url><loc>https://sonimistudio.com.au/brushline.html</loc></url>
-  <url><loc>https://sonimistudio.com.au/golden-pencil.html</loc></url>
-  <url><loc>https://sonimistudio.com.au/lincoln-dental.html</loc></url>
+  <url>
+    <loc>https://sonimistudio.com.au/brushline.html</loc>
+    <lastmod>2026-09-29</lastmod>
+  </url>
+  <url>
+    <loc>https://sonimistudio.com.au/golden-pencil.html</loc>
+    <lastmod>2026-09-29</lastmod>
+  </url>
+  <url>
+    <loc>https://sonimistudio.com.au/lincoln-dental.html</loc>
+    <lastmod>2026-09-29</lastmod>
+  </url>
 </urlset>
